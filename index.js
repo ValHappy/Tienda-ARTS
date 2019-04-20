@@ -28,14 +28,16 @@ app.get('/', function (request, response) {
     response.render('home');
 });
 
+app.get('/tienda', function (request, response) {
+    response.render('tienda');
+});
+
 app.get('/tienda/:tipo', function (request, response) {
-    var tipo = req.params.tipo;
-    if (tipo == null) {
-        // Aqui van todos los productos
-        console.log('aiuda')
-    }
-    else if (tipo == 'nuevo') {
+    var contexto = null;
+    var tipo = request.params.tipo;
+    if (tipo == 'nuevo') {
         // Aqui van los productos nuevos
+        
     }
     else if (tipo == 'promociones') {
         // Aqui van los productos con promociones
@@ -43,7 +45,11 @@ app.get('/tienda/:tipo', function (request, response) {
     else if (tipo == 'destacado') {
         // Aqui van los productos destacados
     }
-    response.render('tienda');
+    else {
+        // Aqui nuevamente van todos los productos
+        response.render('tienda');
+    }
+ 
 });
 
 app.get('/tienda/producto/:producto', function (req, res) {

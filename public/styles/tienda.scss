@@ -1,0 +1,113 @@
+$color-acuamarine: #018D72;
+
+body{
+    margin: 0;
+    font-family: 'Comfortaa', cursive;
+    font-size: 16px;
+}
+
+.menu{
+    display: flex;
+    height: 68px;
+    flex-basis: 68px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    align-items: center;
+    font-size: 17px;
+    font-weight: bold;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    
+    &__logo{
+        width: 10%;
+        margin: 0;
+        padding: .7em;
+        margin-left: 2em;        
+    }
+    
+    &__list{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    
+    &__item{
+        float: left;
+        padding: 0 3em 0 3em;
+    }
+    
+    &__item .icon{
+        display: none;
+    }
+    
+    &__item a{
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 1.5em;
+        text-decoration: none;
+    }
+    
+    &__item a:hover {
+        color:$color-violet;
+    }
+}
+
+.banner{
+    width: 100%;
+    height: 80vh;
+    text-align: center;
+    background-image: url('../img/art_banner.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.benefit{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 600px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    align-items: center;
+    background: $color-violet;
+    
+    &__desc{
+        margin: 2em 2em 0 2em;
+        max-width: 1000px;
+        padding: 2em;
+        text-align: center;
+        color: white;
+    }
+    
+    &__feature {
+        display: flex;
+        margin: 2em;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.feature{
+    width: 14%;
+    margin: 0 50px 0 50px;
+    
+    &__img {
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 160px;
+    }
+    
+    &__title{
+        color: white;
+        text-align: center;
+        font-family: 'Homemade Apple', cursive;
+        font-size: 18px;
+    }
+    
+    &__info {
+        color: white;
+        text-align: center;
+    }
+}

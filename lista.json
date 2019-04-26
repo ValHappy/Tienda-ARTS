@@ -1,0 +1,202 @@
+[
+    //Producto 1
+    {
+        "_id": 1,
+        "nombre": "Regla Paralela Thales",
+        "precio": "27800",
+        "categoria": "Arquitectura",
+        "imagen": "https://tecnos.com.co/images/virtuemart/product/993.jpg",
+        "tipo": "promo",
+        "descripcion": "Regla de 60 cm"
+    },
+    //Producto 2
+    {
+        "_id": 1,
+        "nombre": "Regla Paralela Thales",
+        "precio": "27800",
+        "categoria": "Arquitectura",
+        "imagen": "https://tecnos.com.co/images/virtuemart/product/993.jpg",
+        "tipo": "promo",
+        "descripcion": "Regla de 60 cm"
+    },
+    //Producto 3
+    {
+        "_id": 1,
+        "nombre": "Regla Paralela Thales",
+        "precio": "27800",
+        "categoria": "Arquitectura",
+        "imagen": "https://tecnos.com.co/images/virtuemart/product/993.jpg",
+        "tipo": "promo",
+        "descripcion": "Regla de 60 cm"
+    },
+    //Producto 4
+    {
+        "_id": 1,
+        "nombre": "Regla Paralela Thales",
+        "precio": "27800",
+        "categoria": "Arquitectura",
+        "imagen": "https://tecnos.com.co/images/virtuemart/product/993.jpg",
+        "tipo": "promo",
+        "descripcion": "Regla de 60 cm"
+    },
+    //Producto 5
+    {
+        "_id": 1,
+        "nombre": "Regla Paralela Thales",
+        "precio": "27800",
+        "categoria": "Arquitectura",
+        "imagen": "https://tecnos.com.co/images/virtuemart/product/993.jpg",
+        "tipo": "promo",
+        "descripcion": "Regla de 60 cm"
+    },
+    //Producto 6
+    {
+        "_id": 1,
+        "nombre": "Regla Paralela Thales",
+        "precio": "27800",
+        "categoria": "Arquitectura",
+        "imagen": "https://tecnos.com.co/images/virtuemart/product/993.jpg",
+        "tipo": "promo",
+        "descripcion": "Regla de 60 cm"
+    },
+    //Producto 7
+    {
+        "_id": 1,
+        "nombre": "Regla Paralela Thales",
+        "precio": "27800",
+        "categoria": "Arquitectura",
+        "imagen": "https://tecnos.com.co/images/virtuemart/product/993.jpg",
+        "tipo": "promo",
+        "descripcion": "Regla de 60 cm"
+    },
+    //Producto 8
+    {
+        "_id": 1,
+        "nombre": "Regla Paralela Thales",
+        "precio": "27800",
+        "categoria": "Arquitectura",
+        "imagen": "https://tecnos.com.co/images/virtuemart/product/993.jpg",
+        "tipo": "promo",
+        "descripcion": "Regla de 60 cm"
+    },
+    //Producto 9
+    {
+        "_id": 1,
+        "nombre": "Regla Paralela Thales",
+        "precio": "27800",
+        "categoria": "Arquitectura",
+        "imagen": "https://tecnos.com.co/images/virtuemart/product/993.jpg",
+        "tipo": "promo",
+        "descripcion": "Regla de 60 cm"
+    },
+    //Producto 10
+    {
+        "_id": 1,
+        "nombre": "Regla Paralela Thales",
+        "precio": "27800",
+        "categoria": "Arquitectura",
+        "imagen": "https://tecnos.com.co/images/virtuemart/product/993.jpg",
+        "tipo": "promo",
+        "descripcion": "Regla de 60 cm"
+    },
+    //Producto 11
+    {
+        "_id": 1,
+        "nombre": "Regla Paralela Thales",
+        "precio": "27800",
+        "categoria": "Arquitectura",
+        "imagen": "https://tecnos.com.co/images/virtuemart/product/993.jpg",
+        "tipo": "promo",
+        "descripcion": "Regla de 60 cm"
+    },
+    //Producto 12
+    {
+        "_id": 1,
+        "nombre": "Regla Paralela Thales",
+        "precio": "27800",
+        "categoria": "Arquitectura",
+        "imagen": "https://tecnos.com.co/images/virtuemart/product/993.jpg",
+        "tipo": "promo",
+        "descripcion": "Regla de 60 cm"
+    },
+    //Producto 13
+    {
+        "_id": 1,
+        "nombre": "Regla Paralela Thales",
+        "precio": "27800",
+        "categoria": "Arquitectura",
+        "imagen": "https://tecnos.com.co/images/virtuemart/product/993.jpg",
+        "tipo": "promo",
+        "descripcion": "Regla de 60 cm"
+    },
+    //Producto 14
+    {
+        "_id": 1,
+        "nombre": "Regla Paralela Thales",
+        "precio": "27800",
+        "categoria": "Arquitectura",
+        "imagen": "https://tecnos.com.co/images/virtuemart/product/993.jpg",
+        "tipo": "promo",
+        "descripcion": "Regla de 60 cm"
+    },
+    //Producto 15
+    {
+        "_id": 1,
+        "nombre": "Regla Paralela Thales",
+        "precio": "27800",
+        "categoria": "Arquitectura",
+        "imagen": "https://tecnos.com.co/images/virtuemart/product/993.jpg",
+        "tipo": "promo",
+        "descripcion": "Regla de 60 cm"
+    },
+    //Producto 16
+    {
+        "_id": 1,
+        "nombre": "Regla Paralela Thales",
+        "precio": "27800",
+        "categoria": "Arquitectura",
+        "imagen": "https://tecnos.com.co/images/virtuemart/product/993.jpg",
+        "tipo": "promo",
+        "descripcion": "Regla de 60 cm"
+    },
+    //Producto 17
+    {
+        "_id": 1,
+        "nombre": "Regla Paralela Thales",
+        "precio": "27800",
+        "categoria": "Arquitectura",
+        "imagen": "https://tecnos.com.co/images/virtuemart/product/993.jpg",
+        "tipo": "promo",
+        "descripcion": "Regla de 60 cm"
+    },
+    //Producto 18
+    {
+        "_id": 1,
+        "nombre": "Regla Paralela Thales",
+        "precio": "27800",
+        "categoria": "Arquitectura",
+        "imagen": "https://tecnos.com.co/images/virtuemart/product/993.jpg",
+        "tipo": "promo",
+        "descripcion": "Regla de 60 cm"
+    },
+    //Producto 19
+    {
+        "_id": 1,
+        "nombre": "Regla Paralela Thales",
+        "precio": "27800",
+        "categoria": "Arquitectura",
+        "imagen": "https://tecnos.com.co/images/virtuemart/product/993.jpg",
+        "tipo": "promo",
+        "descripcion": "Regla de 60 cm"
+    },
+    //Producto 20
+    {
+        "_id": 1,
+        "nombre": "Regla Paralela Thales",
+        "precio": "27800",
+        "categoria": "Arquitectura",
+        "imagen": "https://tecnos.com.co/images/virtuemart/product/993.jpg",
+        "tipo": "promo",
+        "descripcion": "Regla de 60 cm"
+    }
+]

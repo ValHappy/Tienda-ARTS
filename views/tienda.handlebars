@@ -1,64 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/tienda.css">
     <title>Document</title>
 </head>
+
 <body>
-     <header class="ppal">
+    <header class="ppal">
         <section class="menu">
             <img src="img/logo.png" class="menu__logo">
             <nav class="menu__nav" id="nav">
                 <ul class="menu__list">
-                    <li class="menu__item"><a href="#">Beneficios</a></li>
-                    <li class="menu__item"><a href="#">Galería</a></li>
-                    <li class="menu__item"><a href="#">Más vendido</a></li>
-                    <li class="menu__item"><a href="/tienda">Tienda</a></li>
-                    <li class="menu__item"><a href="#">Contáctenos</a></li>
-                    <li class="menu__item"><a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars fa-lg"></i></a></li>
+                    <li class="menu__item"><a href="/arquitectura">Arquitectura</a></li>
+                    <li class="menu__item"><a href="/diseño">Diseño</a></li>
+                    <li class="menu__item"><a href="/arte">Arte</a></li>
+                    <li class="menu__item"><a href="/papeleria">Papelería</a></li>
+                    <li class="menu__item"><a href="/escritura">Escritura</a></li>
+                    <li class="menu__item"><a href="javascript:void(0);" class="icon" onclick="myFunction()"><i
+                                class="fa fa-bars fa-lg"></i></a></li>
                 </ul>
             </nav>
         </section>
-        
-        <section class="banner"></section>
+
+        <article class="carrito">
+            <h4 class="carrito__items"> 0 </h4>
+            <!--img del carrito-->
+        </article>
+
+        <section class="banner">
+            <div class="banner__orange">
+                <div class="banner__blue">
+                    <!--Aqui va un banner de imgs-->
+                </div>
+            </div>
+        </section>
     </header>
-    
-    <div class="benefit">
-        <p class="benefit__desc">Ofrecemos una alta gama de productos de arte y diseño. Además, nuestra tienda tiene varias ventajas.</p>
-        
-        <div class="benefit__feature">
-            <article class="feature">
-                <section>
-                    <img src="img/beneficio1.png" class="feature__img">
-                </section>
-                <section class="feature__info">
-                    <p class="feature__title">Mejor calidad</p>
-                    <p class="feature__desc">Tenemos las marcas más conocidas mundialmente.</p>
-                </section>
-            </article>
-            
-            <article class="feature">
-                <section>
-                    <img src="img/beneficio2.png" class="feature__img">
-                </section>
-                <section class="feature__info">
-                    <p class="feature__title">Modernización</p>
-                    <p class="feature__desc">Ofrecemos un almacen virtual adaptandonos a la era tecnológica.</p>
-                </section>
-            </article>
-            
-            <article class="feature">
-                <section>
-                    <img src="img/beneficio3.png" class="feature__img">
-                </section>
-                <section class="feature__info">
-                    <p class="feature__title">Variedad</p>
-                    <p class="feature__desc">Tenemos especialistas en arte para brindar multiples servicios.</p>
-                </section>
-            </article>
+
+    <section class="info">
+        <h2 class="info__title">Titulo</h2>
+        <p class="info__desc">Ofrecemos una alta gama de productos de arte y diseño. Además, nuestra tienda tiene
+            varias ventajas.</p>
+    </section>
+
+    <section class="productos">
+        <h2 class="productos__title">Productos</h2>
+
+        <div class="filtro">
+            <ul class="filtro__list">
+                <li class="filtro__item"><a href="/promociones">PROMOCIONES</a></li>
+                <li class="filtro__item"><a href="/nuevo">NUEVO</a></li>
+                <li class="filtro__item"><a href="/destacado">DESTACADO</a></li>
+                <li class="filtro__item"><a href="/tienda">VER TODO</a></li>
+            </ul>
         </div>
-    </div>
+
+        <div class="contenedor">
+            <section class="contenido"
+                style="background-image: url('https://www.hola.com/imagenes/estar-bien/20180831128704/ronroneo-gatos-causas/0-595-638/gato-ronroneo-1-m.jpg?interpolation=lanczos-normal&downsize=0.75xw:*&output-format=progressive-jpeg&output-quality=70');border: solid rgb(98, 8, 98)">
+                <p>Nombre</p>
+                <p>Precio</p>
+                <p>Boton</p>
+            </section>
+
+            <section class="contenido"
+                style="background-image: url('https://www.fundacion-affinity.org/sites/default/files/el-gato-necesita-tener-acceso-al-exterior.jpg'); border: solid rgb(8, 8, 98)">
+                <p>Nombre</p>
+                <p>Precio</p>
+                <p>Boton</p>
+            </section>
+
+            <section class="contenido"
+                style="background-image: url('https://www.hola.com/imagenes/estar-bien/20180831128704/ronroneo-gatos-causas/0-595-638/gato-ronroneo-1-m.jpg?interpolation=lanczos-normal&downsize=0.75xw:*&output-format=progressive-jpeg&output-quality=70');border: solid rgb(98, 8, 98)">
+                <p>Nombre</p>
+                <p>Precio</p>
+                <p>Boton</p>
+            </section>
+
+            <section class="contenido"
+                style="background-image: url('https://www.purina.es/gato/purina-one/sites/g/files/mcldtz1856/files/2018-06/Como_saber_si_mi_gato_esta_enfermo%20%282%29.jpg'); border: solid rgb(98, 8, 8)">
+                <p>Nombre</p>
+                <p>Precio</p>
+                <p>Boton</p>
+            </section>
+        </div>
+    </section>
+
 </body>
+
 </html>

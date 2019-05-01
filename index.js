@@ -1,12 +1,18 @@
 var express = require('express');
 var exphbs = require('express-handlebars');
+var MongoClient = require('mongodb').MongoClient;
+var assert = require('assert');
 
+// Inicialización del servidor
 var app = express();
-
 app.use(express.static('public'));
-
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
+
+// Inicialización de mongo
+const url = 'mongodb://localhost:27017';
+const dbName = 'tienda';
+const client = new MongoClient(url);
 
 var productos = [
     {
@@ -37,7 +43,7 @@ app.get('/tienda/:tipo', function (request, response) {
     var tipo = request.params.tipo;
     if (tipo == 'nuevo') {
         // Aqui van los productos nuevos
-        
+
     }
     else if (tipo == 'promociones') {
         // Aqui van los productos con promociones
@@ -49,7 +55,7 @@ app.get('/tienda/:tipo', function (request, response) {
         // Aqui nuevamente van todos los productos
         response.render('tienda');
     }
- 
+
 });
 
 app.get('/tienda/producto/:producto', function (req, res) {
@@ -72,6 +78,30 @@ app.get('/tienda/producto/:producto', function (req, res) {
         res.render('producto', contexto);
     }
 });
+
+app.get('/mostrar', function (request, response) {
+    mostrarTodos();
+    response.render('home');
+});
+
+function mostrarTodos() {
+    client.connect(function(err) {
+        assert.equal(null, err);
+        console.log("Connected successfully to server");
+      
+        const db = client.db(dbName);
+      
+      const productos = db.collection('productos');
+      productos.find({}).toArray(function(err, docs){
+      assert.equal(err, null);
+          console.log("Encontramos los documentos");
+          console.log(docs.length);
+          console.log(docs);
+      });
+      
+        client.close();
+      });
+}
 
 console.log("Servidor iniciado...");
 app.listen(3000);

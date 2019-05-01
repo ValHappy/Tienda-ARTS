@@ -1,7 +1,5 @@
 [
-    //Producto 1
     {
-        "_id": 1,
         "nombre": "Regla Paralela Thales",
         "precio": "27800",
         "categoria": "Arquitectura",
@@ -9,9 +7,7 @@
         "tipo": "promo",
         "descripcion": "Regla de 60 cm"
     },
-    //Producto 2
     {
-        "_id": 2,
         "nombre": "Afilaminas Staedtler",
         "precio": "46300",
         "categoria": "Arquitectura",
@@ -19,9 +15,7 @@
         "tipo": "promo",
         "descripcion": "La acción de rotación para el afilado de las minas de grafito y de color de 2mm. Incluye una serie de consejos de limpieza y parada automática. Adaptable a otras minas de puerto marcas."
     },
-    //Producto 3
     {
-        "_id": 3,
         "nombre": "Curvigrafo Modificable Numerado",
         "precio": "14500",
         "categoria": "Arquitectura",
@@ -29,9 +23,7 @@
         "tipo": "promo",
         "descripcion": "Regla flexible de 50 cm para hacer curvas"
     },
-    //Producto 4
     {
-        "_id": 4,
         "nombre": "Plantilla Circulos Standagraph",
         "precio": "23000",
         "categoria": "Arquitectura",
@@ -39,9 +31,7 @@
         "tipo": "promo",
         "descripcion": "Plantilla para dibujar círculos en pasta que incluye líneas auxiliares."
     },
-    //Producto 5
     {
-        "_id": 5,
         "nombre": "Blender Pro Aqua Medium Molotow",
         "precio": "22500",
         "categoria": "Diseño",
@@ -49,9 +39,7 @@
         "tipo": "promo",
         "descripcion": "Marcador recargable y su tinta es una muestra de la innovación hecha a base de colorantes alimentarios"
     },
-    //Producto 6
     {
-        "_id": 6,
         "nombre": "Rapidografo Desechable Staedtler Individual",
         "precio": "11000",
         "categoria": "Diseño",
@@ -59,9 +47,7 @@
         "tipo": "promo",
         "descripcion": "Rapidografo desechable, puntas 00.5, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8,1.2 y biselado"
     },
-    //Producto 7
     {
-        "_id": 7,
         "nombre": "Touch Brush Marker Unidad",
         "precio": "14000",
         "categoria": "Diseño",
@@ -69,9 +55,7 @@
         "tipo": "promo",
         "descripcion": "Marcador touch twin brush cuenta con punta de pincel y punta biselada, permitiendo a los usuarios expresar una gama más amplia de técnicas, cuerpo ergonómico para un agarre perfecto."
     },
-    //Producto 8
     {
-        "_id": 8,
         "nombre": "Empty Pump Softliner 1mm Brush Tip",
         "precio": "28000",
         "categoria": "Diseño",
@@ -79,9 +63,7 @@
         "tipo": "promo",
         "descripcion": "Este marcador vacío permite la libertad artística en todos los niveles. Además del cuerpo rellenable, existen diversos consejos de intercambio en diferentes estilos disponibles. El marcador es compatible con casi todas las pinturas y tintas. De esta forma, los tonos de color individuales pueden mezclarse y almacenarse fácilmente. La flexibilidad de este marcador vacío difícilmente puede ser superada."
     },
-    //Producto 9
     {
-        "_id": 9,
         "nombre": "Acuarela Studio Pebeo X 12",
         "precio": "35500",
         "categoria": "Arte",
@@ -89,9 +71,7 @@
         "tipo": "promo",
         "descripcion": "Set ACUARELA Studio 12 unidades X 12 ml, Pebeo. Las Pinturas de acuarela les permiten una gran resistencia al paso del tiempo."
     },
-    //Producto 10
     {
-        "_id": 10,
         "nombre": "Oleopastel Faber X 36",
         "precio": "68000",
         "categoria": "Arte",
@@ -99,9 +79,7 @@
         "tipo": "promo",
         "descripcion": "Las tizas pastel grasas ofrecen sorprendentes posibilidades de aplicación tanto para colores fuertes e intensos como para delicados tonos pastel. Dada su alta luminosidad, las tizas son ideales para técnicas de encáustica así como para técnicas de raspado y pastel. En función del efecto artístico deseado, se puede difuminar con el dedo o aceite de trementina y pincel. Fáciles de aplicar. Ideales para trabajar sobre microporoso. Resistente al agua. No tóxicos"
     },
-    //Producto 11
     {
-        "_id": 11,
         "nombre": "Acrilicos Studio Pebeo X 12",
         "precio": "35500",
         "categoria": "Arte",
@@ -109,9 +87,7 @@
         "tipo": "promo",
         "descripcion": "Set ACRILICO Studio 12 unidades X 12 ml, Pebeo. Las Pinturas de acrilico de Pebeo tienen colores brillantes y profundos, lisos y finos. Les permiten una gran resistencia al paso del tiempo."
     },
-    //Producto 12
     {
-        "_id": 12,
         "nombre": "Techniques Brushes X 6",
         "precio": "60000",
         "categoria": "Arte",
@@ -119,9 +95,7 @@
         "tipo": "promo",
         "descripcion": "Un surtido especialmente seleccionado de pinceles para diferentes técnicas de pintura, desarrollado para producir diferentes marcas, lo que permite al artista mayores posibilidades creativas, cepillo de espuma, de ventilador, plano, de peine, rigger Brush y swordliner."
     },
-    //Producto 13
     {
-        "_id": 13,
         "nombre": "Block Mantequilla 1/4 x 25",
         "precio": "5700",
         "categoria": "Papeleria",
@@ -129,9 +103,7 @@
         "tipo": "promo",
         "descripcion": "Papel de dibujo transparente blanco , ligeramente alisado y con superficie uniforme y sin grano. Ideal para calcado de trabajos escolares y aprendices, decoración, impresión, imágenes, etc"
     },
-    //Producto 14
     {
-        "_id": 14,
         "nombre": "Cartulina Murillo",
         "precio": "13200",
         "categoria": "Papeleria",
@@ -139,9 +111,7 @@
         "tipo": "promo",
         "descripcion": "Papel LONG LIFE y ACID FREE como garantía de larga conservación. El grano que caracteriza la superficie y la resistencia de las tintas a la luz, lo convierten en el papel ideal para: ediciones prestigiosas, impresiones de calidad, trabajos cartotécnicos y de encuadernación, dibujo, collages, passe par-tout. "
     },
-    //Producto 15
     {
-        "_id": 15,
         "nombre": "Bitácora Diaryflex 100 GMS",
         "precio": "45000",
         "categoria": "Papeleria",
@@ -149,9 +119,7 @@
         "tipo": "promo",
         "descripcion": "Hoja con puntos recargable, papel blanco natural, 80 Hojas / 160 Páginas, interior rojo, correa elástica y marcador incorporado, titular de la tarjeta en el interior de la cubierta, orientación vertical."
     },
-    //Producto 16
     {
-        "_id": 16,
         "nombre": "Bitácora Cappuccino 120 GMS A4",
         "precio": "62000",
         "categoria": "Papeleria",
@@ -159,9 +127,7 @@
         "tipo": "promo",
         "descripcion": "Cuaderno de bocetos con papel marrón claro de dibujo liso, con su superficie cerrada, es perfectamente adecuado para trabajar con bolígrafos de tinta china, plumas estilográficas y marcadores acrílicos, así como con otros bolígrafos a base de agua con una abrasión mínima, 40 hojas / 80 páginas con 120 gsm de tamaño A4."
     },
-    //Producto 17
     {
-        "_id": 17,
         "nombre": "Minas 5.6 Caja por 6 Cretacolor",
         "precio": "30000",
         "categoria": "Escritura",
@@ -169,9 +135,7 @@
         "tipo": "promo",
         "descripcion": "Repuestos para portaminas 5,6 ML"
     },
-    //Producto 18
     {
-        "_id": 18,
         "nombre": "Compas Staedtler adaptador y portaminas",
         "precio": "82500",
         "categoria": "Escritura",
@@ -179,9 +143,7 @@
         "tipo": "promo",
         "descripcion": "Compas de precisión staedtler profesional de ajuste inmediato, adaptador, portaminas y minas 0.5mm"
     },
-    //Producto 19
     {
-        "_id": 19,
         "nombre": "ReBolígrafo Ageless Pilot Platagla Paralela Thales",
         "precio": "110000",
         "categoria": "Escritura",
@@ -189,9 +151,7 @@
         "tipo": "promo",
         "descripcion": "Bolígrafo con acabado especialmente delicado. Tinta fusión gel-aceite con la fluidez del gel y a la vez tiene la consistencia de los base aceite. Mecanismo exclusivo de doble giro, mediante el que se extrae su punta en dos pasos."
     },
-    //Producto 20
     {
-        "_id": 20,
         "nombre": "Estilografo Al Star Lamy",
         "precio": "153000",
         "categoria": "Escritura",

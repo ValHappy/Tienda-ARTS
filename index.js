@@ -34,28 +34,37 @@ app.get('/', function (request, response) {
     response.render('home');
 });
 
-app.get('/tienda', function (request, response) {
-    response.render('tienda');
-});
-
-app.get('/tienda/:tipo', function (request, response) {
+app.get('/tienda/:categoria?', function (request, response) {
     var contexto = null;
-    var tipo = request.params.tipo;
-    if (tipo == 'nuevo') {
-        // Aqui van los productos nuevos
-
-    }
-    else if (tipo == 'promociones') {
-        // Aqui van los productos con promociones
-    }
-    else if (tipo == 'destacado') {
-        // Aqui van los productos destacados
-    }
-    else {
+    var query = {};
+    if (request.params.categoria) {
+        query.categoria = request.params.categoria;
+        if (request.query.tipo) {
+            query.tipo = request.query.tipo;
+        }
+        if (request.query.precio) {
+            query.precio = { $lte: parseInt(request.query.precio) };
+        }
+        var context = {}
+        consultar(query).then(docs => {
+            context.productos = docs;
+            categoria = query.categoria;
+            query2 = {categoria: query.categoria};
+            return consultar(query2);
+        }).then(docs => {
+            context.productosCategoria = docs;
+            response.render('tienda', context);
+        }).catch(error => { });
+    } else {
         // Aqui nuevamente van todos los productos
-        response.render('tienda');
+        consultar(query).then(docs => {
+            var contexto = {
+                productos: docs,
+                categoria: ""
+            };
+            response.render('tienda', contexto);
+        });
     }
-
 });
 
 app.get('/tienda/producto/:producto', function (req, res) {
@@ -84,24 +93,73 @@ app.get('/mostrar', function (request, response) {
     response.render('home');
 });
 
-function mostrarTodos() {
-    client.connect(function(err) {
+function mostrarTodos(tipo) {
+    client.connect(function (err) {
         assert.equal(null, err);
         console.log("Connected successfully to server");
-      
         const db = client.db(dbName);
-      
-      const productos = db.collection('productos');
-      productos.find({}).toArray(function(err, docs){
-      assert.equal(err, null);
-          console.log("Encontramos los documentos");
-          console.log(docs.length);
-          console.log(docs);
-      });
-      
+        const productos = db.collection('productos');
+        productos.find({}).toArray(function (err, docs) {
+            assert.equal(err, null);
+            console.log("Encontramos los documentos");
+            docs.forEach(doc => {
+                console.log(doc.nombre);
+            });
+            return docs;
+        });
         client.close();
-      });
+    });
 }
+
+// function consultar(query) {
+//     return new Promise(function (resolve, reject) {
+//         client.connect(function (err) {
+//             assert.equal(null, err);
+//             console.log("Connected successfully to server");
+//             const db = client.db(dbName);
+//             const productos = db.collection('productos');
+//             productos.find(query).toArray(function (err, docs) {
+//                 assert.equal(err, null);
+//                 resolve(docs);
+//             });
+//             client.close();
+//         });
+//     });
+// }
+
+// function consultar(query) {
+//     return new Promise(function (resolve, reject) {
+//         client.connect(function (err) {
+//             assert.equal(null, err);
+//             console.log("Connected successfully to server");
+//             const db = client.db(dbName);
+//             const productos = db.collection('productos');
+//             productos.find(query).toArray(function (err, docs) {
+//                 assert.equal(err, null);
+//                 resolve(docs);
+//             });
+//             client.close();
+//         });
+//     });
+// }
+
+async function consultar(query) {
+    return new Promise(function (resolve, reject) {
+        client.connect(function (err) {
+            assert.equal(null, err);
+            console.log("Connected successfully to server");
+            const db = client.db(dbName);
+            const productos = db.collection('productos');
+            productos.find(query).toArray(function (err, docs) {
+                assert.equal(err, null);
+                resolve(docs);
+            });
+        });
+
+    });
+    db.close();
+}
+
 
 console.log("Servidor iniciado...");
 app.listen(3000);

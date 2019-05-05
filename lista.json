@@ -1,7 +1,7 @@
 [
     {
         "nombre": "Regla Paralela Thales",
-        "precio": "27800",
+        "precio": 27800,
         "categoria": "Arquitectura",
         "imagen": "https://tecnos.com.co/images/virtuemart/product/993.jpg",
         "tipo": "promo",
@@ -9,7 +9,7 @@
     },
     {
         "nombre": "Afilaminas Staedtler",
-        "precio": "46300",
+        "precio": 46300,
         "categoria": "Arquitectura",
         "imagen": "https://tecnos.com.co/images/virtuemart/product/afilaminas%20sta.jpg",
         "tipo": "promo",
@@ -17,7 +17,7 @@
     },
     {
         "nombre": "Curvigrafo Modificable Numerado",
-        "precio": "14500",
+        "precio": 14500,
         "categoria": "Arquitectura",
         "imagen": "https://tecnos.com.co/images/virtuemart/product/CUR08158.jpg",
         "tipo": "promo",
@@ -25,7 +25,7 @@
     },
     {
         "nombre": "Plantilla Circulos Standagraph",
-        "precio": "23000",
+        "precio": 23000,
         "categoria": "Arquitectura",
         "imagen": "https://tecnos.com.co/images/virtuemart/product/IMG_0006-4.jpg",
         "tipo": "promo",
@@ -33,7 +33,7 @@
     },
     {
         "nombre": "Blender Pro Aqua Medium Molotow",
-        "precio": "22500",
+        "precio": 22500,
         "categoria": "Diseño",
         "imagen": "https://tecnos.com.co/images/virtuemart/product/729099.jpg",
         "tipo": "promo",
@@ -41,7 +41,7 @@
     },
     {
         "nombre": "Rapidografo Desechable Staedtler Individual",
-        "precio": "11000",
+        "precio": 11000,
         "categoria": "Diseño",
         "imagen": "https://tecnos.com.co/images/virtuemart/product/STAEDTLER%20VARIOS4.jpg",
         "tipo": "promo",
@@ -49,7 +49,7 @@
     },
     {
         "nombre": "Touch Brush Marker Unidad",
-        "precio": "14000",
+        "precio": 14000,
         "categoria": "Diseño",
         "imagen": "https://tecnos.com.co/images/virtuemart/product/MAR2832.jpg",
         "tipo": "promo",
@@ -57,7 +57,7 @@
     },
     {
         "nombre": "Empty Pump Softliner 1mm Brush Tip",
-        "precio": "28000",
+        "precio": 28000,
         "categoria": "Diseño",
         "imagen": "https://tecnos.com.co/images/virtuemart/product/211011.jpg ",
         "tipo": "promo",
@@ -65,7 +65,7 @@
     },
     {
         "nombre": "Acuarela Studio Pebeo X 12",
-        "precio": "35500",
+        "precio": 35500,
         "categoria": "Arte",
         "imagen": "https://tecnos.com.co/images/virtuemart/product/ACU0054 .jpg",
         "tipo": "promo",
@@ -73,7 +73,7 @@
     },
     {
         "nombre": "Oleopastel Faber X 36",
-        "precio": "68000",
+        "precio": 68000,
         "categoria": "Arte",
         "imagen": "https://tecnos.com.co/images/virtuemart/product/OLE1577.jpg",
         "tipo": "promo",
@@ -81,7 +81,7 @@
     },
     {
         "nombre": "Acrilicos Studio Pebeo X 12",
-        "precio": "35500",
+        "precio": 35500,
         "categoria": "Arte",
         "imagen": "https://tecnos.com.co/images/virtuemart/product/ACR0041 .jpg",
         "tipo": "promo",
@@ -89,7 +89,7 @@
     },
     {
         "nombre": "Techniques Brushes X 6",
-        "precio": "60000",
+        "precio": 60000,
         "categoria": "Arte",
         "imagen": "https://tecnos.com.co/images/virtuemart/product/22.jpg",
         "tipo": "promo",
@@ -97,7 +97,7 @@
     },
     {
         "nombre": "Block Mantequilla 1/4 x 25",
-        "precio": "5700",
+        "precio": 5700,
         "categoria": "Papeleria",
         "imagen": "https://tecnos.com.co/images/virtuemart/product/MANTEQUILLA.jpg",
         "tipo": "promo",
@@ -105,7 +105,7 @@
     },
     {
         "nombre": "Cartulina Murillo",
-        "precio": "13200",
+        "precio": 13200,
         "categoria": "Papeleria",
         "imagen": "https://tecnos.com.co/images/virtuemart/product/CAR4006.jpg",
         "tipo": "promo",
@@ -113,7 +113,7 @@
     },
     {
         "nombre": "Bitácora Diaryflex 100 GMS",
-        "precio": "45000",
+        "precio": 45000,
         "categoria": "Papeleria",
         "imagen": "https://tecnos.com.co/images/virtuemart/product/Diapositiva277.jpg",
         "tipo": "promo",
@@ -121,7 +121,7 @@
     },
     {
         "nombre": "Bitácora Cappuccino 120 GMS A4",
-        "precio": "62000",
+        "precio": 62000,
         "categoria": "Papeleria",
         "imagen": "https://tecnos.com.co/images/virtuemart/product/Diapositiva273.jpg",
         "tipo": "promo",
@@ -129,7 +129,7 @@
     },
     {
         "nombre": "Minas 5.6 Caja por 6 Cretacolor",
-        "precio": "30000",
+        "precio": 30000,
         "categoria": "Escritura",
         "imagen": "https://tecnos.com.co/images/virtuemart/product/MIN14988.jpg",
         "tipo": "promo",
@@ -137,7 +137,7 @@
     },
     {
         "nombre": "Compas Staedtler adaptador y portaminas",
-        "precio": "82500",
+        "precio": 82500,
         "categoria": "Escritura",
         "imagen": "https://tecnos.com.co/images/virtuemart/product/COM37626.jpg",
         "tipo": "promo",
@@ -145,7 +145,7 @@
     },
     {
         "nombre": "ReBolígrafo Ageless Pilot Platagla Paralela Thales",
-        "precio": "110000",
+        "precio": 110000,
         "categoria": "Escritura",
         "imagen": "https://tecnos.com.co/images/virtuemart/product/AGELESS PLATA.jpg",
         "tipo": "promo",
@@ -153,7 +153,7 @@
     },
     {
         "nombre": "Estilografo Al Star Lamy",
-        "precio": "153000",
+        "precio": 153000,
         "categoria": "Escritura",
         "imagen": "https://tecnos.com.co/images/virtuemart/product/EST0889VINO.jpg",
         "tipo": "promo",

@@ -9,14 +9,14 @@
     <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles/tienda.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="/styles/tienda.css">
+    <title>Tienda ARTS | for artist lovers</title>
 </head>
 
 <body>
     <header class="ppal">
         <section class="menu">
-            <img src="img/logo.png" class="menu__logo">
+            <img src="/img/logo.png" class="menu__logo">
             <nav class="menu__nav" id="nav">
                 <ul class="menu__list">
                     <li class="menu__item"><a href="/arquitectura">Arquitectura</a></li>
@@ -37,8 +37,24 @@
 
         <section class="banner">
             <div class="banner__orange">
+                <article>
+                    <p class="banner__arts">A</p>
+                    <p class="banner__arts">AR</p>
+                    <p class="banner__arts">ART</p>
+                    <p class="banner__arts">ARTS </p>
+                </article>
+
                 <div class="banner__blue">
-                    <!--Aqui va un banner de imgs-->
+                    <article>
+                        <p class="banner__arts">ARTS </p>
+                        <p class="banner__arts">ART</p>
+                        <p class="banner__arts">AR</p>
+                        <p class="banner__arts">A</p>
+                    </article>
+
+                    <div class="banner__img">
+
+                    </div>
                 </div>
             </div>
         </section>
@@ -52,47 +68,53 @@
 
     <section class="productos">
         <h2 class="productos__title">Productos</h2>
-
         <div class="filtro">
             <ul class="filtro__list">
-                <li class="filtro__item"><a href="/promociones">PROMOCIONES</a></li>
+                <li class="filtro__item filtro__first"><a href="/promociones">PROMOCIONES</a></li>
                 <li class="filtro__item"><a href="/nuevo">NUEVO</a></li>
                 <li class="filtro__item"><a href="/destacado">DESTACADO</a></li>
                 <li class="filtro__item"><a href="/tienda">VER TODO</a></li>
             </ul>
         </div>
-
-        <div class="contenedor">
-            <section class="contenido"
-                style="background-image: url('https://www.hola.com/imagenes/estar-bien/20180831128704/ronroneo-gatos-causas/0-595-638/gato-ronroneo-1-m.jpg?interpolation=lanczos-normal&downsize=0.75xw:*&output-format=progressive-jpeg&output-quality=70');border: solid rgb(98, 8, 98)">
-                <p>Nombre</p>
-                <p>Precio</p>
-                <p>Boton</p>
-            </section>
-
-            <section class="contenido"
-                style="background-image: url('https://www.fundacion-affinity.org/sites/default/files/el-gato-necesita-tener-acceso-al-exterior.jpg'); border: solid rgb(8, 8, 98)">
-                <p>Nombre</p>
-                <p>Precio</p>
-                <p>Boton</p>
-            </section>
-
-            <section class="contenido"
-                style="background-image: url('https://www.hola.com/imagenes/estar-bien/20180831128704/ronroneo-gatos-causas/0-595-638/gato-ronroneo-1-m.jpg?interpolation=lanczos-normal&downsize=0.75xw:*&output-format=progressive-jpeg&output-quality=70');border: solid rgb(98, 8, 98)">
-                <p>Nombre</p>
-                <p>Precio</p>
-                <p>Boton</p>
-            </section>
-
-            <section class="contenido"
-                style="background-image: url('https://www.purina.es/gato/purina-one/sites/g/files/mcldtz1856/files/2018-06/Como_saber_si_mi_gato_esta_enfermo%20%282%29.jpg'); border: solid rgb(98, 8, 8)">
-                <p>Nombre</p>
-                <p>Precio</p>
-                <p>Boton</p>
-            </section>
-        </div>
     </section>
 
+    <section>
+        <!--lo que hicimos en lab del viernes-->
+        <h1>Tienda</h1>
+
+        <ul>
+            {{#each productos}}
+            <li class="contenido">
+                <!--con un arreglo de imagenes es asi-->
+                <!--<img src="{{imagenes.[0]}}" alt="">-->
+                <!--happy lo tiene con una sola imagen, so... es de otra forma-->
+                <img src="{{imagen}}" width="200px">
+                <h3>{{nombre}}</h3>
+                <p>{{precio}}</p>
+                <p>{{categoria}}</p>
+            </li>
+            {{/each}}
+        </ul>
+    </section>
+    <h1>Productos categoria</h1>
+    <section>
+        <!--lo que hicimos en lab del viernes-->
+        <h1>Tienda</h1>
+
+        <ul>
+            {{#each productosCategoria}}
+            <li class="contenido">
+                <!--con un arreglo de imagenes es asi-->
+                <!--<img src="{{imagenes.[0]}}" alt="">-->
+                <!--happy lo tiene con una sola imagen, so... es de otra forma-->
+                <img src="{{imagen}}" width="200px">
+                <h3>{{nombre}}</h3>
+                <p>{{precio}}</p>
+                <p>{{categoria}}</p>
+            </li>
+            {{/each}}
+        </ul>
+    </section>
 </body>
 
 </html>

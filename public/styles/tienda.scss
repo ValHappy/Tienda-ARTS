@@ -18,42 +18,46 @@ body{
     font-size: 17px;
     font-weight: bold;
     position: absolute;
-    background: rgba(255, 255, 255, 0.8);
+    // background: rgba(255, 255, 255, 0.8);
+    z-index: 10;
     
     &__logo{
-        width: 10%;
+        width: 30%;
         margin: 0;
         padding: .7em;
-        margin-left: 2em;        
+        margin-left: 2em;      
     }
     
-    &__list{
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
+    &-categoria {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba($color: black, $alpha: 0.3);
+        padding: 0.8em;
+        position: absolute;
+        left: 210%;
+        top: 0%;
+        
+        &__icono {
+            
+        }
+        
+        &__texto {
+            font-size: 15px;
+        }
     }
     
-    &__item{
-        float: left;
-        padding: 0 3em 0 3em;
+    &-sesion {
+        position: absolute;
+        left: 240%;
+        top: 0%; 
+        
+        &__texto {
+            font: black;
+        }
     }
     
-    &__item .icon{
-        display: none;
-    }
-    
-    &__item a{
-        display: block;
-        color: black;
-        text-align: center;
-        padding: 1.5em;
-        text-decoration: none;
-    }
-    
-    &__item a:hover {
-        color:#018D72;
-    }
 }
 
 .carrito{
@@ -63,7 +67,7 @@ body{
     position: fixed;
     margin-top: 350px;
     right: 0%;
-    
+    z-index: 2;
     
     &__items{
         color: white;
@@ -83,31 +87,56 @@ body{
         margin: 0;
         letter-spacing: 10px;
         text-align: left;
+        
+        &-a{
+            position: relative;
+            top: 300px;
+            left: -50px;
+        }
+        
+        &-b{
+            position: relative;
+            top: -257px;
+            left: 5px;
+        }
     }
     
     &__orange{
         width: 60%;
-        height: 90%;
+        height: 85%;
         display: flex;
         align-items: center;
         justify-content: center;
         background: $color-orange;
         margin-left: 25%;
+        z-index: 6;
+        position: relative;
+        top: -20%;
     }
     
     &__blue{
         width: 60%;
-        height: 90%;
+        height: 75%;
         margin-left: 15%;
         display: flex;
         align-items: center;
         justify-content: center;
         background: $color-blue;
         text-align: center;
-        //background-image: url('../img/touch.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        z-index: 8;
+        position: relative;
+        top: 8%;
+    }
+    
+    &__img{
+        width: 100%;
+        height: 80%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
     }
 }
 
@@ -119,6 +148,9 @@ body{
     justify-content: center;
     align-items: center;
     background: $color-light-orange;
+    z-index: -1;
+    position: relative;
+    top: -300px;
     
     &__title {
         background: rebeccapurple;
@@ -169,7 +201,7 @@ body{
         float: left;
         padding: 0 1.5em 0 1.5em;
     }
-
+    
     &__first{
         padding: 0;
     }
@@ -188,36 +220,40 @@ body{
 }
 
 .contenedor{
-    display: flex;
-    flex-basis: 100%;
+    width: 100%;
+    height: 100%;
     margin: auto;
-    width: 80%;
-    height: 80vh;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: stretch;
-    background: #00a7bd;
-}
-
-.contenido{
-    display: flex;
-    flex-basis: 20%;
-    width: 20%;
-    height: 40%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: all .3s ease-in-out;
-    flex-grow: 1;
-
-    &__largo{
-        flex-grow: 3;
-    }
     
-    &:hover{
-        //box-shadow: 8px 8px 10px 0px rgba(230,230,230,1);
-        cursor: pointer;
+    &__lista{ 
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: -0.5em;
+        
+        padding: 0;
+        background: #fff6ed;
+        
+        &-item{
+            list-style-type: none;
+        }
     }
 }
 
+.item{
+    &-nombre{
+        text-align: center;
+        font-size: 15px;
+    }
 
+    &-precio{
+        font-size: 14px;
+    }
+}
+
+// &:hover{
+    //box-shadow: 8px 8px 10px 0px rgba(230,230,230,1);
+    // cursor: pointer;
+    // }
+    
+    

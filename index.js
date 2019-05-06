@@ -52,7 +52,7 @@ app.get('/tienda/:categoria?', function (request, response) {
             query2 = {categoria: query.categoria};
             return consultar(query2);
         }).then(docs => {
-            context.productosCategoria = docs;
+            context.productoC = docs[0];
             response.render('tienda', context);
         }).catch(error => { });
     } else {

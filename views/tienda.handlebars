@@ -8,6 +8,9 @@
     <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/styles/tienda.css">
     <title>Tienda ARTS | for artist lovers</title>
@@ -18,15 +21,13 @@
         <section class="menu">
             <img src="/img/logo.png" class="menu__logo">
             <nav class="menu__nav" id="nav">
-                <ul class="menu__list">
-                    <li class="menu__item"><a href="/arquitectura">Arquitectura</a></li>
-                    <li class="menu__item"><a href="/diseño">Diseño</a></li>
-                    <li class="menu__item"><a href="/arte">Arte</a></li>
-                    <li class="menu__item"><a href="/papeleria">Papelería</a></li>
-                    <li class="menu__item"><a href="/escritura">Escritura</a></li>
-                    <li class="menu__item"><a href="javascript:void(0);" class="icon" onclick="myFunction()"><i
-                                class="fa fa-bars fa-lg"></i></a></li>
-                </ul>
+                <div class="menu-categoria">
+                    <i class="fas fa-ellipsis-h menu-categoria__icono"></i>
+                    <a class="menu-categoria__texto">Categoría</a>
+                </div>
+                <div class="menu-sesion">
+                    <a class="menu-sesion__texto">Iniciar sesión</a>
+                </div>
             </nav>
         </section>
 
@@ -38,22 +39,22 @@
         <section class="banner">
             <div class="banner__orange">
                 <article>
-                    <p class="banner__arts">A</p>
-                    <p class="banner__arts">AR</p>
-                    <p class="banner__arts">ART</p>
-                    <p class="banner__arts">ARTS </p>
+                    <p class="banner__arts banner__arts-a">A</p>
+                    <p class="banner__arts banner__arts-a">AR</p>
+                    <p class="banner__arts banner__arts-a">ART</p>
+                    <p class="banner__arts banner__arts-a">ARTS </p>
                 </article>
 
                 <div class="banner__blue">
                     <article>
-                        <p class="banner__arts">ARTS </p>
-                        <p class="banner__arts">ART</p>
-                        <p class="banner__arts">AR</p>
-                        <p class="banner__arts">A</p>
+                        <p class="banner__arts banner__arts-b ">ARTS </p>
+                        <p class="banner__arts banner__arts-b">ART</p>
+                        <p class="banner__arts banner__arts-b">AR</p>
+                        <p class="banner__arts banner__arts-b">A</p>
                     </article>
 
                     <div class="banner__img">
-
+                        <img src="{{productoC.imagen}}" alt="">
                     </div>
                 </div>
             </div>
@@ -70,51 +71,29 @@
         <h2 class="productos__title">Productos</h2>
         <div class="filtro">
             <ul class="filtro__list">
-                <li class="filtro__item filtro__first"><a href="/promociones">PROMOCIONES</a></li>
-                <li class="filtro__item"><a href="/nuevo">NUEVO</a></li>
-                <li class="filtro__item"><a href="/destacado">DESTACADO</a></li>
+                <li class="filtro__item filtro__first"><a href="/tienda/promociones">PROMOCIONES</a></li>
+                <li class="filtro__item"><a href="/tienda/nuevo">NUEVO</a></li>
+                <li class="filtro__item"><a href="/tienda/destacado">DESTACADO</a></li>
                 <li class="filtro__item"><a href="/tienda">VER TODO</a></li>
             </ul>
         </div>
-    </section>
+    
 
-    <section>
-        <!--lo que hicimos en lab del viernes-->
-        <h1>Tienda</h1>
 
-        <ul>
+    <!--mi lista-->
+    <section class="contenedor">
+        <ul class="contenedor__lista">
             {{#each productos}}
-            <li class="contenido">
-                <!--con un arreglo de imagenes es asi-->
-                <!--<img src="{{imagenes.[0]}}" alt="">-->
-                <!--happy lo tiene con una sola imagen, so... es de otra forma-->
-                <img src="{{imagen}}" width="200px">
-                <h3>{{nombre}}</h3>
-                <p>{{precio}}</p>
+            <li class="contenedor__lista-item">
+                <img class="item-img" src="{{imagen}}" width="200px">
+                <h3 class="item-nombre">{{nombre}}</h3>
+                <p class="item-precio">{{precio}}</p>
                 <p>{{categoria}}</p>
             </li>
             {{/each}}
         </ul>
     </section>
-    <h1>Productos categoria</h1>
-    <section>
-        <!--lo que hicimos en lab del viernes-->
-        <h1>Tienda</h1>
-
-        <ul>
-            {{#each productosCategoria}}
-            <li class="contenido">
-                <!--con un arreglo de imagenes es asi-->
-                <!--<img src="{{imagenes.[0]}}" alt="">-->
-                <!--happy lo tiene con una sola imagen, so... es de otra forma-->
-                <img src="{{imagen}}" width="200px">
-                <h3>{{nombre}}</h3>
-                <p>{{precio}}</p>
-                <p>{{categoria}}</p>
-            </li>
-            {{/each}}
-        </ul>
-    </section>
+</section>
 </body>
 
 </html>

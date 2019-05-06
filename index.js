@@ -93,6 +93,10 @@ app.get('/mostrar', function (request, response) {
     response.render('home');
 });
 
+app.get('/carrito', function (request, response) {
+    response.render('carrito');
+});
+
 function mostrarTodos(tipo) {
     client.connect(function (err) {
         assert.equal(null, err);

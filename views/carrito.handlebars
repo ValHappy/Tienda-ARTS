@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
+
+    <!--icono-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/styles/carrito.css">
+    <title>Carrito de Compras</title>
+</head>
+
+<body>
+
+
+    <section>
+        <h2 class="carrito__titulo">Carrito de compras</h2>
+        <p class="carrito__continuar">Continuar compras</p>
+    </section>
+
+    <section class="carrito">
+        <div class="carrito__productos">
+            <!--aqui van los productos que vaya agregando-->
+        </div>
+        <div class="carrito__resumen">
+            <h3 class="carrito__resumen-titulo">Resumen de tu Pedido</h3>
+            <p class="carrito__resumen-subtotal">Subtotal</p>
+            <p class="carrito__resumen-envio">Envio</p>
+            <p class="carrito__resumen-total">Total</p>
+
+            <hr>
+
+            <div class="pago-sin">
+                <form action="/login" method="POST">
+                    <label for="">Nombre</label>
+                    <input name="nombre" type="text" placeholder="Nombre y Apellidos">
+
+                    <label for="">Celular</label>
+                    <input name="celular" type="number" placeholder="Celular">
+
+                    <label for="">Dirección</label>
+                    <input name="direccion" type="text" placeholder="Dirección">
+
+                    <button>Confirmar y realizar pago</button>
+                </form>
+            </div>
+
+            <div class="pago-con">
+                <form action="/login" method="POST">
+
+                    <label for="">Correo</label>
+                    <input name="correo" type="email" placeholder="correo@ejemplo.com" value="correo@ejemplo.com">
+
+                    <label for="">Contraseña</label>
+                    <input name="contrasena" type="password" placeholder="contraseña">
+
+                    <button>Iniciar y realizar pago</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="pie">
+        <section class="pie-a">
+            <div>
+                <img src="/img/logo_b.png" class="pie__logo">
+            </div>
+
+            <div class="pie-redes">
+                <p class="pie-red">red 1</p>
+                <p class="pie-red">red 2</p>
+                <p class="pie-red">red 3</p>
+            </div>
+        </section>
+
+        <hr class="pie-linea">
+
+        <p class="pie-contacto">Contáctenos</p>
+    </footer>
+
+</body>
+
+</html>

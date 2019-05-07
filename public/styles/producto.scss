@@ -1,0 +1,58 @@
+
+body{
+    margin: 0;
+    font-family: 'Comfortaa', cursive;
+    font-size: 16px;
+}
+
+.vista-detallada{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    &__img{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
+    &__info{
+        
+    }
+}
+
+.producto-detallado{
+    
+    &__nombre{
+        background: rebeccapurple;
+    }
+    
+    &__label{
+        background: red;
+    }
+    
+    &__precio{
+        background: yellow;  
+    }
+}
+
+.acciones{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    
+    &__cantidad{
+        width: 80%;
+
+        &-nombre{
+            background: green;
+        }
+    }
+    
+    &__btn{
+        width: 20%;
+    }
+}

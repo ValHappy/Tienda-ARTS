@@ -30,9 +30,12 @@
                         <a class="menu-categoria__texto">Categoría</a>
                     </button>
                     <div id="myDropdown" class="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
+
+                        <a href="/tienda/Diseño">Diseño</a>
+                        <a href="/tienda/Arte">Arte</a>
+                        <a href="/tienda/Papeleria">Papelería</a>
+                        <a href="/tienda/Escritura">Escritura</a>
+                        <a href="/tienda/Arquitectura">Arquitectura</a>
                     </div>
                 </div>
                 <div class="menu-sesion">
@@ -82,10 +85,17 @@
         <h2 class="productos__title">Productos</h2>
         <div class="filtro">
             <ul class="filtro__list">
-                <li class="filtro__item filtro__first"><a href="/tienda/promociones">PROMOCIONES</a></li>
-                <li class="filtro__item"><a href="/tienda/nuevo">NUEVO</a></li>
-                <li class="filtro__item"><a href="/tienda/destacado">DESTACADO</a></li>
-                <li class="filtro__item"><a href="/tienda">VER TODO</a></li>
+                {{#if categoria }}
+                <li class="filtro__item filtro__first"><a href="/tienda/{{categoria}}?tipo=promo">PROMOCIONES</a></li>
+                <li class="filtro__item"><a href="/tienda/{{categoria}}?tipo=nuevo">NUEVO</a></li>
+                <li class="filtro__item"><a href="/tienda{{categoria}}?tipo=destacado">DESTACADO</a></li>
+                <li class="filtro__item"><a href="/tienda/{{categoria}}">VER TODO CON CATEGORIA</a></li>
+                {{else}}
+                <li class="filtro__item filtro__first"><a href="/tienda?tipo=promo">PROMOCIONES</a></li>
+                <li class="filtro__item"><a href="/tienda?tipo=nuevo">NUEVO</a></li>
+                <li class="filtro__item"><a href="/tienda?tipo=destacado">DESTACADO</a></li>
+                <li class="filtro__item"><a href="/tienda">VER TODO SIN CATEGORIA</a></li>
+                {{/if}}
             </ul>
         </div>
     </section>

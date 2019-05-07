@@ -41,6 +41,7 @@ app.get('/tienda/:categoria?/:id?', function (request, response) {
         if (request.params.categoria == 'producto' && request.params.id) {
             cargarProducto(request.params.id, response);
         } else {
+            console.log("Ingreso a la si categorìa");
             query.categoria = request.params.categoria;
             if (request.query.tipo) {
                 query.tipo = request.query.tipo;
@@ -51,7 +52,7 @@ app.get('/tienda/:categoria?/:id?', function (request, response) {
             var context = {}
             consultar(query).then(docs => {
                 context.productos = docs;
-                categoria = query.categoria;
+                context.categoria = query.categoria;
                 query2 = { categoria: query.categoria };
                 return consultar(query2);
             }).then(docs => {
@@ -61,10 +62,13 @@ app.get('/tienda/:categoria?/:id?', function (request, response) {
         }
     } else {
         // Aqui nuevamente van todos los productos
+        console.log("Ingreso a la no categorìa");
+        if (request.query.tipo) {
+            query.tipo = request.query.tipo;
+        }
         consultar(query).then(docs => {
             var contexto = {
-                productos: docs,
-                categoria: ""
+                productos: docs
             };
             response.render('tienda', contexto);
         });
@@ -128,7 +132,7 @@ async function consultar(query) {
                 resolve(docs);
             });
         });
-        client.close();
+        // client.close();
     });
 }
 

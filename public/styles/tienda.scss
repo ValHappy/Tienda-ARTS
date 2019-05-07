@@ -23,6 +23,7 @@ body{
     
     &__logo{
         width: 30%;
+        height: 60%;
         margin: 0;
         padding: .7em;
         margin-left: 2em;      
@@ -51,7 +52,7 @@ body{
     &-sesion {
         position: absolute;
         left: 240%;
-        top: 0%; 
+        top: 15%; 
         
         &__texto {
             font: black;
@@ -244,25 +245,25 @@ body{
 }
 
 .item{
-    &-img{
+    &__img{
         padding: 1.5em;
     }
 
-    &-nombre{
+    &__nombre{
         text-align: center;
         font-size: 15px;
         padding: 0.2em;
         background: #00a7bd;
     }
 
-    &-precio{
+    &__precio{
         text-align: center;
         font-size: 14px;
         background: #d78c2f;
     }
 
     //Borrar esto luguito------
-    &-c{
+    &__c{
         font-size: 9px;
     }
 }

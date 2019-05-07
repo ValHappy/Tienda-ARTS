@@ -19,15 +19,29 @@
 </head>
 
 <body>
+    <header class="ppal">
+        <section class="menu">
+            <img src="/img/logo.png" class="menu__logo">
+            <nav class="menu__nav" id="nav">
+                <div class="menu-categoria">
+                    <i class="fas fa-ellipsis-h menu-categoria__icono"></i>
+                    <a class="menu-categoria__texto">Categoría</a>
+                </div>
+                <div class="menu-sesion">
+                    <a class="menu-sesion__texto">Iniciar sesión</a>
+                </div>
+            </nav>
+        </section>
+    </header>
 
-
-    <section>
-        <h2 class="carrito__titulo">Carrito de compras</h2>
-        <p class="carrito__continuar">Continuar compras</p>
+    <section class="encabezado">
+        <h2 class="encabezado__titulo">Carrito de compras</h2>
+        <p class="encabezado__continuar"><a href="/tienda">Continuar compras</a></p>
     </section>
 
     <section class="carrito">
         <div class="carrito__productos">
+            <h3 class="carrito__titulo">Carrito de Compras</h3>
             <!--aqui van los productos que vaya agregando-->
         </div>
         <div class="carrito__resumen">
@@ -40,29 +54,32 @@
 
             <div class="pago-sin">
                 <form action="/login" method="POST">
-                    <label for="">Nombre</label>
-                    <input name="nombre" type="text" placeholder="Nombre y Apellidos">
+                    <div class="pago-sin__info">
+                        <label for="">Nombre</label>
+                        <input name="nombre" type="text" placeholder="Nombre y Apellidos">
 
-                    <label for="">Celular</label>
-                    <input name="celular" type="number" placeholder="Celular">
+                        <label for="">Celular</label>
+                        <input name="celular" type="tel" placeholder="Celular">
 
-                    <label for="">Dirección</label>
-                    <input name="direccion" type="text" placeholder="Dirección">
+                        <label for="">Dirección</label>
+                        <input name="direccion" type="text" placeholder="Dirección">
+                    </div>
 
-                    <button>Confirmar y realizar pago</button>
+                    <button class="pago-sin__btn">Confirmar y realizar pago</button>
                 </form>
             </div>
 
             <div class="pago-con">
                 <form action="/login" method="POST">
+                    <div class="pago-con__info">
+                        <label for="">Correo</label>
+                        <input name="correo" type="email" placeholder="correo@ejemplo.com">
 
-                    <label for="">Correo</label>
-                    <input name="correo" type="email" placeholder="correo@ejemplo.com" value="correo@ejemplo.com">
+                        <label for="">Contraseña</label>
+                        <input name="contrasena" type="password" placeholder="contraseña">
+                    </div>
 
-                    <label for="">Contraseña</label>
-                    <input name="contrasena" type="password" placeholder="contraseña">
-
-                    <button>Iniciar y realizar pago</button>
+                    <button class="pago-con__btn">Iniciar y realizar pago</button>
                 </form>
             </div>
 
@@ -86,7 +103,6 @@
 
         <p class="pie-contacto">Contáctenos</p>
     </footer>
-
 </body>
 
 </html>

@@ -35,7 +35,7 @@
     </header>
 
     <article class="carrito">
-        <h4 class="carrito__items"> 0 </h4>
+        <span class="carrito__items"><a href="/carrito"> 0 </a></span>
         <!--img del carrito-->
     </article>
 
@@ -87,15 +87,19 @@
         <ul class="contenedor__lista">
             {{#each productos}}
             <li class="contenedor__lista-item">
-                <img class="item-img" src="{{imagen}}" width="200px">
-                <h3 class="item-nombre">{{nombre}}</h3>
-                <p class="item-precio">{{precio}}</p>
-                <p class="item-c">{{categoria}}</p>
+                <a href="7tienda7producto/{{id}}">
+                    <img class="item__img" src="{{imagen}}" width="200px">
+                    <h3 class="item__nombre">{{nombre}}</h3>
+                    <p class="item__precio">{{precio}}</p>
+                    <p class="item__c">{{categoria}}</p>
+                </a>
+                <button class="item__btn">Agregar al carrito</button>
             </li>
             {{/each}}
         </ul>
     </section>
 
+    <script src="/scripts/tienda.js"></script>
 </body>
 
 </html>

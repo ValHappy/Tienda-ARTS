@@ -11,8 +11,9 @@
     <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
 
     <!--icono-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
 
     <link rel="stylesheet" href="/styles/carrito.css">
     <title>Carrito de Compras</title>
@@ -41,10 +42,28 @@
 
     <section class="carrito">
         <div class="carrito__productos">
+
             <h3 class="carrito__titulo">Carrito de Compras</h3>
-            <!--aqui van los productos que vaya agregando-->
+
+            <div class="producto__contenedor">
+
+                <div class="producto__img"></div>
+
+                <div class="producto__contenido">
+                    <h3 class="producto__nombre">NOMBRE</h3>
+                    <h3 class="producto__tipo">TIPO</h3>
+                    <p class="producto__precio">PRECIO</p>
+                    <div>
+                        <input type="number" min="1" max="100" value="1" />
+                    </div>
+                </div>
+                <i class="far fa-times-circle fa-2x"></i>
+            </div>
+
         </div>
+
         <div class="carrito__resumen">
+
             <h3 class="carrito__resumen-titulo">Resumen de tu Pedido</h3>
             <p class="carrito__resumen-subtotal">Subtotal</p>
             <p class="carrito__resumen-envio">Envio</p>
@@ -53,6 +72,7 @@
             <hr>
 
             <div class="pago-sin">
+
                 <form action="/login" method="POST">
                     <div class="pago-sin__info">
                         <label for="">Nombre</label>
@@ -67,9 +87,11 @@
 
                     <button class="pago-sin__btn">Confirmar y realizar pago</button>
                 </form>
+
             </div>
 
             <div class="pago-con">
+
                 <form action="/login" method="POST">
                     <div class="pago-con__info">
                         <label for="">Correo</label>
@@ -81,9 +103,11 @@
 
                     <button class="pago-con__btn">Iniciar y realizar pago</button>
                 </form>
+
             </div>
 
         </div>
+
     </section>
 
     <footer class="pie">
@@ -93,9 +117,9 @@
             </div>
 
             <div class="pie-redes">
-                <p class="pie-red">red 1</p>
-                <p class="pie-red">red 2</p>
-                <p class="pie-red">red 3</p>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
             </div>
         </section>
 
@@ -103,6 +127,11 @@
 
         <p class="pie-contacto">Contáctenos</p>
     </footer>
+
+
+    <script src="/scripts/producto.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </body>
 
 </html>

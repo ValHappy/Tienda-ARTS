@@ -31,11 +31,11 @@
                     </button>
                     <div id="myDropdown" class="dropdown-content">
 
-                        <a href="/tienda/Diseño">Diseño</a>
-                        <a href="/tienda/Arte">Arte</a>
-                        <a href="/tienda/Papeleria">Papelería</a>
-                        <a href="/tienda/Escritura">Escritura</a>
-                        <a href="/tienda/Arquitectura">Arquitectura</a>
+                        <a href="/tienda/diseño">Diseño</a>
+                        <a href="/tienda/arte">Arte</a>
+                        <a href="/tienda/papeleria">Papelería</a>
+                        <a href="/tienda/escritura">Escritura</a>
+                        <a href="/tienda/arquitectura">Arquitectura</a>
                     </div>
                 </div>
                 <div class="menu-sesion">
@@ -45,9 +45,10 @@
         </section>
     </header>
 
-    <article class="carrito">
-        <span class="carrito__items"><a href="/carrito"> 0 </a></span>
-        <!--img del carrito-->
+    <article class="carrito" >
+        <a class="carrito__items"></a>
+        <br>
+        <i class="fas fa-shopping-cart fa-2x carrito__items"></i>
     </article>
 
     <section class="banner">
@@ -88,7 +89,7 @@
                 {{#if categoria }}
                 <li class="filtro__item filtro__first"><a href="/tienda/{{categoria}}?tipo=promo">PROMOCIONES</a></li>
                 <li class="filtro__item"><a href="/tienda/{{categoria}}?tipo=nuevo">NUEVO</a></li>
-                <li class="filtro__item"><a href="/tienda{{categoria}}?tipo=destacado">DESTACADO</a></li>
+                <li class="filtro__item"><a href="/tienda/{{categoria}}?tipo=destacado">DESTACADO</a></li>
                 <li class="filtro__item"><a href="/tienda/{{categoria}}">VER TODO CON CATEGORIA</a></li>
                 {{else}}
                 <li class="filtro__item filtro__first"><a href="/tienda?tipo=promo">PROMOCIONES</a></li>
@@ -106,7 +107,7 @@
             {{#each productos}}
             <li class="contenedor__lista-item">
                 <a href="/tienda/producto/{{_id}}">
-                    <img class="item__img" src="{{imagen}}" width="200px">
+                    <img class="item__img" src="{{imagen}}">
                     <h3 class="item__nombre">{{nombre}}</h3>
                     <p class="item__precio">{{precio}}</p>
                     <p class="item__c">{{categoria}}</p>

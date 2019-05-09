@@ -64,14 +64,19 @@ body{
 .carrito{
     width: 10vh;
     height: 15vh;
-    background: black;
+    background: rgb(255, 142, 142);
     position: fixed;
     margin-top: 350px;
     right: 0%;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     
     &__items{
         color: white;
+        text-decoration: none;
         text-align: center;
     }
 }
@@ -229,7 +234,7 @@ body{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: flex-start;
         margin: -0.5em;
         padding: 0;
         //background: #fff6ed;
@@ -237,6 +242,7 @@ body{
         &-item{
             width: 250px;
             height: 250px;
+            margin: 10em;
             list-style-type: none;
             border: solid #00a7bd;
             margin: 0.4em;
@@ -246,6 +252,7 @@ body{
 
 .item{
     &__img{
+        width: 80%;
         padding: 1.5em;
     }
     

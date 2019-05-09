@@ -35,6 +35,8 @@ function paginaCargada() {
     boton.addEventListener('click', agregarAlCarrito);
   }
   botones.forEach(recorrerBotones);
+
+  
 }
 window.addEventListener('load', paginaCargada);
 

@@ -5,18 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="styles/producto.css">
+
+    <!--icono-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/styles/producto.css">
     <title>Aiuda Detallado</title>
 </head>
 
 <body>
+    <div class="carrito" onclick="location.href='/carrito'">
+        <a class="carrito__items">0</a>
+        <br>
+        <i class="fas fa-shopping-cart fa-2x carrito__items"></i>
+    </div>
+
     <section class="vista-detallada">
-        <img src="/img/beneficio1.png" alt="" class="vista-detallada__img">
+        <img src="{{imagen}}" alt="" class="vista-detallada__img">
         <section class="vista-detallada__info">
             <div class="producto-detallado">
-                <h3 class="producto-detallado__nombre">Nombre</h3>
+                <h3 class="producto-detallado__nombre">{{nombre}}</h3>
                 <label class="producto-detallado__label">Precio</label>
-                <p class="producto-detallado__precio">80000</p>
+                <p class="producto-detallado__precio">{{precio}}</p>
             </div>
 
             <div class="acciones">
@@ -26,12 +37,11 @@
                 </div>
                 <button class="acciones__btn">Agregar</button>
             </div>
-
-            <p class="vista-detallada__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quas
-                recusandae dicta aut omnis dolore earum labore, explicabo aspernatur distinctio assumenda! Omnis
-                harum explicabo dolorum vero totam inventore quae tenetur!</p>
+            <!--ajaaaaaaaaaaaaaaaaaaaaaaa-->
+            <p class="vista-detallada__desc">{{descripcion}}</p>
         </section>
     </section>
-
+    <script src="/scripts/producto.js"></script>
 </body>
+
 </html>

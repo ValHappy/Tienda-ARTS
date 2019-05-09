@@ -1,5 +1,6 @@
 var express = require('express');
 var exphbs = require('express-handlebars');
+var mongo = require('mongodb');
 var MongoClient = require('mongodb').MongoClient;
 var assert = require('assert');
 
@@ -90,15 +91,21 @@ function cargarProducto(idProducto, res) {
         console.log("Connected successfully to server");
         const db = client.db(dbName);
         const productos = db.collection('productos');
-        productos.find({ _id: idProducto }).toArray(function (err, docs) {
+        var o_id = new mongo.ObjectID(idProducto);
+        productos.find({ _id: o_id }).toArray(function (err, docs) {
             assert.equal(err, null);
             console.log("Encontramos los documentos");
+            console.log(docs[0]);
             var contexto = {
-                producto: docs[0]
+                //producto : docs[0]
+                id: docs[0]._id,
+                nombre: docs[0].nombre,
+                precio: docs[0].precio,
+                descripcion: docs[0].descripcion,
+                imagen: docs[0].imagen
             };
             res.render('producto', contexto);
         });
-        client.close();
     });
 }
 

@@ -1,26 +1,35 @@
-(function ($) {
-    $.fn.spinner = function () {
-        this.each(function () {
-            var el = $(this);
+function paginaCargada() {
+    var listaProductos = [];
+    var carritoNum = document.querySelector('.carrito__items');
+    if (localStorage.getItem('listaProductos') != null) {
+        listaProductos = JSON.parse(localStorage.getItem('listaProductos'));
+    }
 
-            // add elements
-            el.wrap('<span class="spinner"></span>');
-            el.before('<span class="sub">-</span>');
-            el.after('<span class="add">+</span>');
+    function actualizarCarrito() {
+        carritoNum.innerHTML = listaProductos.length;
+        // localStorage.removeItem('listaProductos');
+        // listaProductos = [];
+    }
 
-            // substract
-            el.parent().on('click', '.sub', function () {
-                if (el.val() > parseInt(el.attr('min')))
-                    el.val(function (i, oldval) { return --oldval; });
-            });
+    actualizarCarrito();
 
-            // increment
-            el.parent().on('click', '.add', function () {
-                if (el.val() < parseInt(el.attr('max')))
-                    el.val(function (i, oldval) { return ++oldval; });
-            });
-        });
-    };
-})(jQuery);
+    var botonProductoDetalle = document.querySelector('.acciones__btn');
 
-$('input[type=number]').spinner();
+    function agregarAlCarritoDetalle() {
+        var nombre = document.querySelector('.producto-detallado__nombre').innerText;
+        var precio = document.querySelector('.producto-detallado__precio').innerText;
+        var imagen = document.querySelector('.vista-detallada__img').src;
+        var producto = {
+            nombre: nombre,
+            precio: precio,
+            imagen: imagen,
+        };
+
+        listaProductos.push(producto);
+        actualizarCarrito();
+        localStorage.setItem('listaProductos', JSON.stringify(listaProductos));
+    }
+    botonProductoDetalle.addEventListener('click', agregarAlCarritoDetalle);
+
+}
+window.addEventListener('load', paginaCargada);

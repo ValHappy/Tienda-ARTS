@@ -5,6 +5,30 @@ body{
     font-size: 16px;
 }
 
+.carrito{
+    width: 10vh;
+    height: 15vh;
+    background: rgb(255, 142, 142);
+    position: fixed;
+    margin-top: 350px;
+    right: 0%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    &:hover{
+        cursor: pointer;
+    }
+    
+    &__items{
+        color: white;
+        text-decoration: none;
+        text-align: center;
+    }
+}
+
 .vista-detallada{
     width: 100%;
     height: 80vh;
@@ -46,7 +70,7 @@ body{
     
     &__cantidad{
         width: 80%;
-
+        
         &-nombre{
             background: green;
         }

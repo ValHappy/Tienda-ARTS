@@ -39,9 +39,7 @@
                         <a href="/tienda/arquitectura">Arquitectura</a>
                     </div>
                 </div>
-                <div class="menu-sesion">
-                    <a class="menu-sesion__texto">Iniciar sesión</a>
-                </div>
+
             </nav>
         </section>
     </header>
@@ -108,6 +106,7 @@
             {{#each productos}}
             <li class="contenedor__lista-item">
                 <a href="/tienda/producto/{{_id}}">
+                    <input type="hidden" class="item__id" value="{{_id}}">
                     <img class="item__img" src="{{imagen}}">
                     <h3 class="item__nombre">{{nombre}}</h3>
                     <p class="item__precio">{{precio}}</p>

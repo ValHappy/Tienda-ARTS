@@ -42,7 +42,6 @@ app.get('/tienda/:categoria?/:id?', function (request, response) {
         if (request.params.categoria == 'producto' && request.params.id) {
             cargarProducto(request.params.id, response);
         } else {
-            console.log("Ingreso a la si categorìa");
             query.categoria = request.params.categoria;
             if (request.query.tipo) {
                 query.tipo = request.query.tipo;
@@ -63,7 +62,6 @@ app.get('/tienda/:categoria?/:id?', function (request, response) {
         }
     } else {
         // Aqui nuevamente van todos los productos
-        console.log("Ingreso a la no categorìa");
         if (request.query.tipo) {
             query.tipo = request.query.tipo;
         }
@@ -88,17 +86,14 @@ app.get('/carrito', function (request, response) {
 function cargarProducto(idProducto, res) {
     client.connect(function (err) {
         assert.equal(null, err);
-        console.log("Connected successfully to server");
         const db = client.db(dbName);
         const productos = db.collection('productos');
         var o_id = new mongo.ObjectID(idProducto);
         productos.find({ _id: o_id }).toArray(function (err, docs) {
             assert.equal(err, null);
-            console.log("Encontramos los documentos");
-            console.log(docs[0]);
             var contexto = {
                 //producto : docs[0]
-                id: docs[0]._id,
+                _id: docs[0]._id,
                 nombre: docs[0].nombre,
                 precio: docs[0].precio,
                 descripcion: docs[0].descripcion,
@@ -112,15 +107,10 @@ function cargarProducto(idProducto, res) {
 function mostrarTodos(tipo) {
     client.connect(function (err) {
         assert.equal(null, err);
-        console.log("Connected successfully to server");
         const db = client.db(dbName);
         const productos = db.collection('productos');
         productos.find({}).toArray(function (err, docs) {
             assert.equal(err, null);
-            console.log("Encontramos los documentos");
-            docs.forEach(doc => {
-                console.log(doc.nombre);
-            });
             return docs;
         });
         client.close();
@@ -131,7 +121,6 @@ async function consultar(query) {
     return new Promise(function (resolve, reject) {
         client.connect(function (err) {
             assert.equal(null, err);
-            console.log("Connected successfully to server");
             const db = client.db(dbName);
             const productos = db.collection('productos');
             productos.find(query).toArray(function (err, docs) {

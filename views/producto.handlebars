@@ -28,12 +28,13 @@
                 <h3 class="producto-detallado__nombre">{{nombre}}</h3>
                 <label class="producto-detallado__label">Precio</label>
                 <p class="producto-detallado__precio">{{precio}}</p>
+                <input type="hidden" class="item__id" value="{{_id}}">
             </div>
 
             <div class="acciones">
                 <div class="acciones__cantidad">
                     <p class="acciones__cantidad-nombre">Cantidad</p>
-                    <!--hacer el cuadro-->
+                    <input class="acciones__cantidad-btn" type="number" min="1" max="100" value="1" />
                 </div>
                 <button class="acciones__btn">Agregar</button>
             </div>

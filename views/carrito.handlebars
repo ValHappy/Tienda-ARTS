@@ -69,24 +69,26 @@
         <div class="carrito__resumen">
 
             <h3 class="carrito__resumen-titulo">Resumen de tu Pedido</h3>
-            <p class="carrito__resumen-subtotal">Subtotal</p>
-            <p class="carrito__resumen-envio">Envio</p>
-            <p class="carrito__resumen-total">Total</p>
+            <p class="carrito__resumen-subtotal">Subtotal <a class="carrito-resumen__subtotal-valor">5966</a></p>
+            <p class="carrito__resumen-envio">Envio <a class="carrito-resumen__envio-valor">$8000</a></p>
+            <p class="carrito__resumen-total">Total <a class="carrito-resumen__total-valor">752</a></p>
 
             <hr>
 
             <div class="pago-sin">
 
-
                 <div class="pago-sin__info">
                     <label for="">Nombre</label>
                     <input class="pago-sin__info-nombre" name="nombre" type="text" placeholder="Nombre y Apellidos">
+                    <label class="campo-invisible campo__nombre">*Este campo es obligatorio</label>
 
                     <label for="">Cedula</label>
                     <input class="pago-sin__info-cc" name="cedula" type="text" placeholder="Cédula">
+                    <label class="campo-invisible campo__cc">*Este campo es obligatorio</label>
 
                     <label for="">Dirección</label>
                     <input class="pago-sin__info-dir" name="direccion" type="text" placeholder="Dirección">
+                    <label class="campo-invisible campo__dir">*Este campo es obligatorio</label>
 
                     <label for="">Medio de Pago</label>
                     <select name="medioPago" class="pago-sin__info-medio" onchange="actualizarMedio()">

@@ -177,11 +177,9 @@ body{
 
 .pago-sin{
     width: 100%;
-    height: 35vh;
+    height: 55vh;
     display: flex;
     flex-direction: column;
-    //justify-content: center;
-    //align-items: center;
     margin-top: 5%;
     background: #fcfcfc;
     -webkit-box-shadow: 9px 9px 10px -3px rgba(0,0,0,0.2);
@@ -203,6 +201,39 @@ body{
 
 label{
     padding: 0.5em;
+}
+
+.campo-obligatorio{
+    
+    &__nombre{
+        font-size: 10px;
+        color: red;
+    }
+    
+    &__cc{
+        font-size: 10px;
+        color: red;
+    }
+    
+    &__dir{
+        font-size: 10px;
+        color: red;   
+    }
+    
+}
+
+
+.campo{
+    
+    &-visible{
+        font-size: 10px;
+        color: red;
+    }
+
+    &-invisible {
+        font-size: 10px;
+        color: white;
+    }
 }
 
 .pago-con{

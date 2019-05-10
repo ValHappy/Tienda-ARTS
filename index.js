@@ -97,7 +97,9 @@ function cargarProducto(idProducto, res) {
                 nombre: docs[0].nombre,
                 precio: docs[0].precio,
                 descripcion: docs[0].descripcion,
-                imagen: docs[0].imagen
+                imagen: docs[0].imagen,
+                categoria: docs[0].categoria,
+                tipo: docs[0].tipo
             };
             res.render('producto', contexto);
         });

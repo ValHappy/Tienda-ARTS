@@ -1,6 +1,7 @@
 function paginaCargada() {
 
   var listaProductos = [];
+  // localStorage.removeItem('listaProductos');
   var carritoNum = document.querySelector('.carrito__items');
   if (localStorage.getItem('listaProductos') != null) {
     listaProductos = JSON.parse(localStorage.getItem('listaProductos'));
@@ -14,8 +15,8 @@ function paginaCargada() {
 
   function actualizarCarrito() {
     carritoNum.innerHTML = listaProductos.length;
-    //localStorage.removeItem('listaProductos');
-    //listaProductos = [];
+    // localStorage.removeItem('listaProductos');
+    // listaProductos = [];
   }
 
   actualizarCarrito();
@@ -28,6 +29,8 @@ function paginaCargada() {
       var precio = padre.querySelector('.item__precio').innerText;
       var imagen = padre.querySelector('.item__img').src;
       var _id = padre.querySelector('.item__id').value;
+      var categoria = padre.querySelector('.item__c').value;
+      var tipo = padre.querySelector('.item__t').value;
       var producto = {
         _id: _id,
         id: identificador,
@@ -35,6 +38,8 @@ function paginaCargada() {
         nombre: nombre,
         precio: precio,
         imagen: imagen,
+        categoria: categoria,
+        tipo: tipo
       };
       identificador += 1;
       localStorage.setItem('identificador', identificador);
@@ -47,7 +52,7 @@ function paginaCargada() {
   }
   botones.forEach(recorrerBotones);
 
-  
+
 }
 window.addEventListener('load', paginaCargada);
 

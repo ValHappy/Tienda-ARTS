@@ -47,22 +47,23 @@
             <div class="lista__carrito">
 
             </div>
-            <!--concatenar esto al inner html del js-->
+            <!--concatenar esto al inner html del js
             <div class="producto__contenedor">
                 <img class="producto__img" src="IMAGEN" alt="">
                 <div class="producto__contenido">
                     <h3 class="producto__nombre">NOMBRE</h3>
                     <h3 class="producto__tipo">TIPO</h3>
                     <p class="producto__precio">PRECIO</p>
+                    <input type="hidden" class="item__id" value="{{id}}">
                     <div>
-                        <input type="number" min="1" max="100" value="1" />
+                        <input class="producto__cantidad" type="number" min="1" max="100" value="1"/>
                     </div>
                 </div>
 
                 <div class="producto__x">
-                    <p class="producto__x-item"><i class="far fa-times-circle fa-2x "></i></p>
+                    <a class="producto__x-item"><i class="far fa-times-circle fa-2x "></i></a>
                 </div>
-            </div>
+            </div>-->
         </div>
 
         <div class="carrito__resumen">
@@ -76,24 +77,30 @@
 
             <div class="pago-sin">
 
-                <form action="/login" method="POST">
-                    <div class="pago-sin__info">
-                        <label for="">Nombre</label>
-                        <input name="nombre" type="text" placeholder="Nombre y Apellidos">
 
-                        <label for="">Celular</label>
-                        <input name="celular" type="tel" placeholder="Celular">
+                <div class="pago-sin__info">
+                    <label for="">Nombre</label>
+                    <input class="pago-sin__info-nombre" name="nombre" type="text" placeholder="Nombre y Apellidos">
 
-                        <label for="">Dirección</label>
-                        <input name="direccion" type="text" placeholder="Dirección">
-                    </div>
+                    <label for="">Cedula</label>
+                    <input class="pago-sin__info-cc" name="cedula" type="text" placeholder="Cédula">
 
-                    <button class="pago-sin__btn">Confirmar y realizar pago</button>
-                </form>
+                    <label for="">Dirección</label>
+                    <input class="pago-sin__info-dir" name="direccion" type="text" placeholder="Dirección">
+
+                    <label for="">Medio de Pago</label>
+                    <select name="medioPago" class="pago-sin__info-medio" onchange="actualizarMedio()">
+                        <option class="info-medio" value="Efectivo">Efectivo</option>
+                        <option class="info-medio" value="Credito">Tarjeta Credito</option>
+                        <option class="info-medio" value="Debito">Tarjeta Débito</option>
+                    </select>
+                </div>
+
+                <button class="pago-sin__btn">Confirmar y realizar pago</button>
 
             </div>
 
-            <div class="pago-con">
+            <!--<div class="pago-con">
 
                 <form action="/login" method="POST">
                     <div class="pago-con__info">
@@ -107,7 +114,7 @@
                     <button class="pago-con__btn">Iniciar y realizar pago</button>
                 </form>
 
-            </div>
+            </div>-->
 
         </div>
 

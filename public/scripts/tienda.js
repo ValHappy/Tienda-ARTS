@@ -2,19 +2,18 @@ function paginaCargada() {
 
   var listaProductos = [];
   // localStorage.removeItem('listaProductos');
+  // localStorage.removeItem('identificador');
   var carritoNum = document.querySelector('.carrito__items');
   if (localStorage.getItem('listaProductos') != null) {
     listaProductos = JSON.parse(localStorage.getItem('listaProductos'));
   }
 
-  var identificador = 0;
-  if (localStorage.getItem('identificador') != null) {
-    identificador = localStorage.getItem('identificador');
-  }
-
-
   function actualizarCarrito() {
-    carritoNum.innerHTML = listaProductos.length;
+    var nuevaCantidad = 0;
+    listaProductos.forEach(producto => {
+      nuevaCantidad += producto.cantidad;
+    });
+    carritoNum.innerHTML = nuevaCantidad;
     // localStorage.removeItem('listaProductos');
     // listaProductos = [];
   }
@@ -22,8 +21,11 @@ function paginaCargada() {
   actualizarCarrito();
 
   var botones = document.querySelectorAll('.item__btn');
+
   function recorrerBotones(boton) {
+
     function agregarAlCarrito() {
+
       var padre = boton.parentNode;
       var nombre = padre.querySelector('.item__nombre').innerText;
       var precio = padre.querySelector('.item__precio').innerText;
@@ -31,20 +33,23 @@ function paginaCargada() {
       var _id = padre.querySelector('.item__id').value;
       var categoria = padre.querySelector('.item__c').value;
       var tipo = padre.querySelector('.item__t').value;
-      var producto = {
-        _id: _id,
-        id: identificador,
-        cantidad: 1,
-        nombre: nombre,
-        precio: precio,
-        imagen: imagen,
-        categoria: categoria,
-        tipo: tipo
-      };
-      identificador += 1;
-      localStorage.setItem('identificador', identificador);
 
-      listaProductos.push(producto);
+      var producto = listaProductos.find(producto => producto._id == _id);
+      if (producto) {
+        producto.cantidad += 1;
+      }
+      else {
+        var producto = {
+          _id: _id,
+          cantidad: 1,
+          nombre: nombre,
+          precio: precio,
+          imagen: imagen,
+          categoria: categoria,
+          tipo: tipo
+        };
+        listaProductos.push(producto);
+      }
       actualizarCarrito();
       localStorage.setItem('listaProductos', JSON.stringify(listaProductos));
     }

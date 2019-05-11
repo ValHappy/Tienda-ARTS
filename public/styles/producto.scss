@@ -17,11 +17,11 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+
     &:hover{
         cursor: pointer;
     }
-    
+
     &__items{
         color: white;
         text-decoration: none;
@@ -30,36 +30,61 @@ body{
 }
 
 .vista-detallada{
-    width: 100%;
-    height: 80vh;
+    width: 80%;
+    height: 90vh;
+    margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
+    // background: #d78c2f;
+
     &__img{
+        width: 40%;
+        padding: 2em;
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
     }
-    
+
     &__info{
-        
+        width: 60%;
+        //background: blue;
+
     }
 }
 
 .producto-detallado{
-    
+
     &__nombre{
-        background: rebeccapurple;
+        // background: rebeccapurple;
+        // font-family: 'Homemade Apple', cursive;
+        font-size: 30px;
+        margin: 0.5em 0 0.5em 0;
     }
-    
+
     &__label{
-        background: red;
+        &-p{
+            //    background: red;
+            margin-top: 0.5em;
+        }
+
+        &-d{
+            // background: rebeccapurple;
+            margin: 0;
+        }
     }
-    
+
     &__precio{
-        background: yellow;  
+        // background: yellow;
+        margin-top: 0.5em;
+        font-size: 20px;
+    }
+
+    &__desc{
+        // background: yellow;
+        margin-top: 0.5em;
+        font-size: 17px;
     }
 }
 
@@ -67,16 +92,40 @@ body{
     width: 100%;
     display: flex;
     flex-direction: row;
-    
+    margin: 1em 0 1em 0;
+
     &__cantidad{
         width: 80%;
-        
+        padding: 1em 0 1em 0;
+        // background: gray;
+
         &-nombre{
-            background: green;
+            margin: 0;
         }
     }
-    
+
     &__btn{
-        width: 20%;
+        width: 100%;
+        margin: 0;
+        margin-top: 1.5em;
+        padding: 0.5em;
+        border-radius: 12em;
+        text-align: center;
+        font-size: 13px;
+        font-weight: bold;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+
+    &__btn1{
+        background-color: white;
+        color: #d78c2f;
+        border: 0.1em solid  #d78c2f;
+
+        &:hover {
+            background-color:  #d78c2f;
+            color: white;
+        }
     }
 }

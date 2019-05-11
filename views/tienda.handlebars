@@ -14,35 +14,14 @@
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/styles/navbar.css">
     <link rel="stylesheet" href="/styles/tienda.css">
     <title>Tienda ARTS | for artist lovers</title>
 </head>
 
 <body>
     <!--COMO HACER HERENCIA CON HANDLEBARS AIUDAAAAA-->
-    <header class="ppal">
-        <section class="menu">
-            <img src="/img/logo.png" class="menu__logo">
-            <nav class="menu__nav" id="nav">
-                <div class="menu-categoria">
-
-                    <button onclick="desplegar()" class="dropbtn"> <i
-                            class="fas fa-ellipsis-h menu-categoria__icono"></i>
-                        <a class="menu-categoria__texto">Categoría</a>
-                    </button>
-                    <div id="myDropdown" class="dropdown-content">
-
-                        <a href="/tienda/diseño">Diseño</a>
-                        <a href="/tienda/arte">Arte</a>
-                        <a href="/tienda/papeleria">Papelería</a>
-                        <a href="/tienda/escritura">Escritura</a>
-                        <a href="/tienda/arquitectura">Arquitectura</a>
-                    </div>
-                </div>
-
-            </nav>
-        </section>
-    </header>
+    {{> navbar}}
 
     <div class="carrito" onclick="location.href='/carrito'">
         <a class="carrito__items">0</a>
@@ -76,9 +55,12 @@
 
 
     <section class="info">
-        <h2 class="info__title">Titulo</h2>
-        <p class="info__desc">Ofrecemos una alta gama de productos de arte y diseño. Además, nuestra tienda tiene
-            varias ventajas.</p>
+        <h2 class="info__title">Arts</h2>
+        <p class="info__desc">ARTS, for artist lovers es una empresa con la distribución de las más conocidas marcas
+            mundiales de productos para hacer arte, arquitectura, diseño y hobbies. Todo el conocimiento y experiencia
+            han sido trasladados a sus descendientes, y hoy adaptandonos a la modernización tecnológica y a las
+            necesidades de nuestros clientes.
+        </p>
     </section>
 
     <section class="productos">
@@ -109,11 +91,11 @@
                     <input type="hidden" class="item__id" value="{{_id}}">
                     <img class="item__img" src="{{imagen}}">
                     <h3 class="item__nombre">{{nombre}}</h3>
-                    <p class="item__precio">{{precio}}</p>
+                    <p class="item__precio">${{precio}}</p>
                     <input type="hidden" class="item__c" value="{{categoria}}">
                     <input type="hidden" class="item__t" value="{{tipo}}">
                 </a>
-                <button class="item__btn">Agregar al carrito</button>
+                <button class="item__btn item__btn1">Agregar al carrito</button>
             </li>
             {{/each}}
         </ul>

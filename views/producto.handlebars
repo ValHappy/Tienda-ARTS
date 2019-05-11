@@ -10,11 +10,14 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="/styles/navbar.css">
     <link rel="stylesheet" href="/styles/producto.css">
     <title>Aiuda Detallado</title>
 </head>
 
 <body>
+    {{> navbar}}
+
     <div class="carrito" onclick="location.href='/carrito'">
         <a class="carrito__items">0</a>
         <br>
@@ -26,8 +29,8 @@
         <section class="vista-detallada__info">
             <div class="producto-detallado">
                 <h3 class="producto-detallado__nombre">{{nombre}}</h3>
-                <label class="producto-detallado__label">Precio</label>
-                <p class="producto-detallado__precio">{{precio}}</p>
+                <label class="producto-detallado__label-p">Precio</label>
+                <p class="producto-detallado__precio">${{precio}}</p>
                 <input type="hidden" class="item__id" value="{{_id}}">
                 <input type="hidden" class="item__c" value="{{categoria}}">
                 <input type="hidden" class="item__t" value="{{tipo}}">
@@ -38,10 +41,11 @@
                     <p class="acciones__cantidad-nombre">Cantidad</p>
                     <input class="acciones__cantidad-btn" type="number" min="1" max="100" value="1" />
                 </div>
-                <button class="acciones__btn">Agregar</button>
+                <button class="acciones__btn acciones__btn1">Agregar</button>
             </div>
-            <!--ajaaaaaaaaaaaaaaaaaaaaaaa-->
-            <p class="vista-detallada__desc">{{descripcion}}</p>
+
+            <label class="producto-detallado__label-d">Descripcion</label>
+            <p class="producto-detallado__desc">{{descripcion}}</p>
         </section>
     </section>
     <script src="/scripts/producto.js"></script>

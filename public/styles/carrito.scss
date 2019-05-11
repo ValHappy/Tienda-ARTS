@@ -114,22 +114,21 @@ body{
     
     &__contenedor{
         width: 90%;
-        //border: solid 1px rgba(0, 0, 0, 0.2);
         padding: 1.5em;
         display: flex;
+        //border: solid 1px rgba(0, 0, 0, 0.2);
         //background: #00a7bd;
     }
     
     &__img{
         //background: #ee8d1f;
-        width: 400px;
-        height: 200px;
+        width: 40%;
+        height: 40%;
         margin-right: 5%;
     }
     
     &__contenido{
         width: 50%;
-        
         //background: #ee8d1f;
     }
     

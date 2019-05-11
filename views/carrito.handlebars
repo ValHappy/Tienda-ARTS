@@ -14,26 +14,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
-
+    <link rel="stylesheet" href="/styles/navbar.css">
     <link rel="stylesheet" href="/styles/carrito.css">
     <title>Carrito de Compras</title>
 </head>
 
 <body>
-    <header class="ppal">
-        <section class="menu">
-            <img src="/img/logo.png" class="menu__logo">
-            <nav class="menu__nav" id="nav">
-                <div class="menu-categoria">
-                    <i class="fas fa-ellipsis-h menu-categoria__icono"></i>
-                    <a class="menu-categoria__texto">Categoría</a>
-                </div>
-                <div class="menu-sesion">
-                    <a class="menu-sesion__texto">Iniciar sesión</a>
-                </div>
-            </nav>
-        </section>
-    </header>
+    {{> navbar}}
 
     <section class="encabezado">
         <h2 class="encabezado__titulo">Carrito de compras</h2>
@@ -70,7 +57,7 @@
 
             <h3 class="carrito__resumen-titulo">Resumen de tu Pedido</h3>
             <p class="carrito__resumen-subtotal">Subtotal <a class="carrito-resumen__subtotal-valor">5966</a></p>
-            <p class="carrito__resumen-envio">Envio <a class="carrito-resumen__envio-valor">$8000</a></p>
+            <p class="carrito__resumen-envio">Envio <a class="carrito-resumen__envio-valor">8000</a></p>
             <p class="carrito__resumen-total">Total <a class="carrito-resumen__total-valor">752</a></p>
 
             <hr>

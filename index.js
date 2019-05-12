@@ -88,6 +88,7 @@ app.get('/carrito', function (request, response) {
 
 app.post('/carrito/comprar', function (request, response) {
     pedido = request.body.pedido;
+    pedido.productos = JSON.parse(pedido.productos);
     client.connect(function (err) {
         assert.equal(null, err);
         const db = client.db(dbName);

@@ -17,7 +17,7 @@ const url = 'mongodb://localhost:27017';
 const dbName = 'tienda';
 const client = new MongoClient(url);
 
-var cantidad = 1;
+var precio = 30000;
 
 app.get('/', function (request, response) {
     response.render('home');
@@ -36,17 +36,17 @@ app.get('/tienda/:categoria?/:id?', function (request, response) {
             }
             if (request.query.precio) {
                 var miPrecio = parseInt(request.query.precio);
-                cantidad = miPrecio;
-                query.precio = { $lte: cantidad };
+                precio = miPrecio;
+                query.precio = { $lte: precio };
             }
             var context = {}
             consultar(query).then(docs => {
                 context.productos = docs;
                 context.categoria = query.categoria;
-                context.cantidad = cantidad;
+                context.precio = precio;
                 query2 = { categoria: query.categoria };
                 return consultar(query2);
-            }).then(docs => {
+            }).then(docs => {precio
                 context.productoC = docs[0];
                 response.render('tienda', context);
             }).catch(error => { });
@@ -58,17 +58,19 @@ app.get('/tienda/:categoria?/:id?', function (request, response) {
         }
         if (request.query.precio) {
             var miPrecio = parseInt(request.query.precio);
-            cantidad = miPrecio;
-            query.precio = { $lte: cantidad };
+            precio = miPrecio;
+            query.precio = { $lte: precio };
         }
+        var contexto = {};
         consultar(query).then(docs => {
-            var contexto = {
-                productos: docs,
-                categoria: '',
-                cantidad: cantidad
-            };
+            contexto.productos =  docs;
+            contexto.categoria = '';
+            contexto.precio = precio;
+            return consultar({});
+        }).then(docs => {
+            contexto.productoGeneral = docs[0];
             response.render('tienda', contexto);
-        });
+        }).catch(error => { });
     }
 });
 

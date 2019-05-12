@@ -25,17 +25,29 @@ function paginaCargada() {
   actualizarCarrito();
 
   var barra = document.querySelector('.input-rango');
-  var precio = barra.value;
+  var precioNuevo = barra.value;
+  var salida = document.querySelector('.input-rango__salida');
+  salida.innerHTML = (precioNuevo + '').substring(0, 2) + '000';
   function actualizarPrecio() {
     var iCategoria = document.querySelector(".indicador-categoria");
+    var precio = barra.value;
     var valorICategoria = iCategoria.value;
-    console.log(precio);
+    var salida = document.querySelector('.input-rango__salida');
+    salida.innerHTML = (precio + '').substring(0, 2) + '000';
     if (valorICategoria) {
-      location.href = '/tienda/'+valorICategoria+'?precio=' + precio;
+      location.href = '/tienda/' + valorICategoria + '?precio=' + precio;
     }
     location.href = '/tienda?precio=' + precio;
   }
   barra.addEventListener('change', actualizarPrecio);
+
+  function actualizarSalida() {
+    var precio = barra.value;
+    var salida = document.querySelector('.input-rango__salida');
+    var salida = document.querySelector('.input-rango__salida');
+    salida.innerHTML = (precio + '').substring(0, 2) + '000';
+  }
+  barra.addEventListener('input', actualizarSalida);
 
   var botones = document.querySelectorAll('.item__btn');
 
@@ -45,10 +57,19 @@ function paginaCargada() {
 
       var padre = boton.parentNode;
       var nombre = padre.querySelector('.item__nombre').innerText;
+      if (!nombre) {
+        nombre = padre.querySelector('.item__nombre').value;
+      }
       var precio = padre.querySelector('.item__precio').innerText;
+      if (!precio) {
+        precio = padre.querySelector('.item__precio').value;
+      }
       precio = precio.substring(1, precio.length);
       precio = parseInt(precio);
       var imagen = padre.querySelector('.item__img').src;
+      if (!imagen) {
+        imagen = padre.querySelector('.item__img').value;
+      }
       var _id = padre.querySelector('.item__id').value;
       var categoria = padre.querySelector('.item__c').value;
       var tipo = padre.querySelector('.item__t').value;

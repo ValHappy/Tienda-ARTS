@@ -1,6 +1,10 @@
 $color-orange: #ee8d1f;
 $color-light-orange: #fff6ed;
-$color-blue: #00a7bd;
+$color-orange-ppal: #fae7d7;
+$color-light-orange: #fff6ed;
+$color-blue: #a8dce5;
+$color-rose: #ff8e8e;
+$color-letras_arts: #dfc8ba;
 
 body{
     margin: 0;
@@ -12,7 +16,7 @@ body{
     
     width: 10vh;
     height: 15vh;
-    background: rgb(255, 142, 142);
+    background:$color-rose;
     position: fixed;
     margin-top: 350px;
     right: 0%;
@@ -41,7 +45,7 @@ body{
     justify-content: center;
     
     &__arts{
-        color: white;
+        color: black;
         margin: 0;
         letter-spacing: 10px;
         text-align: left;
@@ -56,6 +60,22 @@ body{
             position: relative;
             top: -257px;
             left: 5px;
+        }
+        
+        &-logo{
+            width: 40%;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            z-index: 15;
+            top:30%;
+            left: -20%;
+            -webkit-transform:rotate(270deg);
+            -moz-transform: rotate(270deg);
+            -ms-transform: rotate(270deg);
+            -o-transform: rotate(270deg);
+            transform: rotate(270deg);
+            
         }
     }
     
@@ -132,6 +152,8 @@ body{
     width: 80%;
     height: 150px;
     margin: auto;
+    position: relative;
+    top: -300px;
     //background: lightblue;
     
     &__title{
@@ -183,6 +205,8 @@ body{
     width: 80%;
     height: 100%;
     margin: auto;
+    position: relative;
+    top: -300px;
     
     &__lista{ 
         display: flex;
@@ -204,7 +228,7 @@ body{
             &:hover{
                 box-shadow: 8px 8px 10px 0px rgba(230,230,230,1);
                 cursor: pointer;
-        }
+            }
         }
     }
 }
@@ -243,6 +267,18 @@ body{
     }
     
     &__btn1{
+        background-color: white; 
+        color: #d78c2f; 
+        border: 0.1em solid  #d78c2f;
+        
+        &:hover {
+            background-color:  #d78c2f;
+            color: white;
+        }
+    }
+    
+    &__btn2{
+        width: 50%;
         background-color: white; 
         color: #d78c2f; 
         border: 0.1em solid  #d78c2f;

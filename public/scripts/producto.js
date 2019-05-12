@@ -5,6 +5,13 @@ function paginaCargada() {
         listaProductos = JSON.parse(localStorage.getItem('listaProductos'));
     }
 
+    var idEscondido = document.querySelector('.item__id').value;
+    var producto = listaProductos.find(producto => producto._id == idEscondido);
+    if (producto) {
+        var elementoCantidad = document.querySelector('.acciones__cantidad-btn');
+        elementoCantidad.value = producto.cantidad;
+    }
+
     function actualizarCarrito() {
         var nuevaCantidad = 0;
         listaProductos.forEach(producto => {
@@ -23,13 +30,14 @@ function paginaCargada() {
     function agregarAlCarritoDetalle() {
         var nombre = document.querySelector('.producto-detallado__nombre').innerText;
         var precio = document.querySelector('.producto-detallado__precio').innerText;
+        precio = precio.substring(1, precio.length);
+        precio = parseInt(precio);
         var imagen = document.querySelector('.vista-detallada__img').src;
         var _id = document.querySelector('.item__id').value;
         var categoria = document.querySelector('.item__c').value;
         var tipo = document.querySelector('.item__t').value;
         var cantidad = document.querySelector('.acciones__cantidad-btn').value;
         cantidad = parseInt(cantidad);
-        console.log(cantidad);
         var producto = listaProductos.find(producto => producto._id == _id);
         if (producto) {
             producto.cantidad += cantidad;

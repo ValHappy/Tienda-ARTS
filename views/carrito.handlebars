@@ -85,26 +85,9 @@
                     </select>
                 </div>
 
-                <button class="pago-sin__btn">Confirmar y realizar pago</button>
+                <button class="pago-sin__btn" onclick="registrar()">Confirmar y realizar pago</button>
 
             </div>
-
-            <!--<div class="pago-con">
-
-                <form action="/login" method="POST">
-                    <div class="pago-con__info">
-                        <label for="">Correo</label>
-                        <input name="correo" type="email" placeholder="correo@ejemplo.com">
-
-                        <label for="">Contraseña</label>
-                        <input name="contrasena" type="password" placeholder="contraseña">
-                    </div>
-
-                    <button class="pago-con__btn">Iniciar y realizar pago</button>
-                </form>
-
-            </div>-->
-
         </div>
 
     </section>
@@ -127,10 +110,22 @@
         <p class="pie-contacto">Contáctenos</p>
     </footer>
 
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-contenido">
+            <span class="cerrar">X</span>
+            <div class="modal-contenido__info">
+            </div>
+        </div>
+
+    </div>
 
     <script src="/scripts/carrito.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </body>
+
+
 
 </html>

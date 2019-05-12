@@ -29,6 +29,8 @@ function paginaCargada() {
       var padre = boton.parentNode;
       var nombre = padre.querySelector('.item__nombre').innerText;
       var precio = padre.querySelector('.item__precio').innerText;
+      precio = precio.substring(1, precio.length);
+      precio = parseInt(precio);
       var imagen = padre.querySelector('.item__img').src;
       var _id = padre.querySelector('.item__id').value;
       var categoria = padre.querySelector('.item__c').value;

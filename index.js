@@ -9,6 +9,8 @@ var app = express();
 app.use(express.static('public'));
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
+app.use(express.urlencoded());
+app.use(express.json());
 
 // Inicialización de mongo
 const url = 'mongodb://localhost:27017';
@@ -80,7 +82,22 @@ app.get('/mostrar', function (request, response) {
 });
 
 app.get('/carrito', function (request, response) {
+    console.log("se ejecuta en NODE");
     response.render('carrito');
+});
+
+app.post('/carrito/comprar', function (request, response) {
+    pedido = request.body.pedido;
+    client.connect(function (err) {
+        assert.equal(null, err);
+        const db = client.db(dbName);
+        const collection = db.collection('pedidos');
+        collection.insertOne(pedido, function (err) {
+            assert.equal(err, null);
+            response.send('compra exitosa.');
+        });
+        // client.close();
+    });
 });
 
 function cargarProducto(idProducto, res) {
@@ -92,14 +109,14 @@ function cargarProducto(idProducto, res) {
         productos.find({ _id: o_id }).toArray(function (err, docs) {
             assert.equal(err, null);
             var contexto = {
-                //producto : docs[0]
                 _id: docs[0]._id,
                 nombre: docs[0].nombre,
                 precio: docs[0].precio,
                 descripcion: docs[0].descripcion,
                 imagen: docs[0].imagen,
                 categoria: docs[0].categoria,
-                tipo: docs[0].tipo
+                tipo: docs[0].tipo,
+                cantidad: 1
             };
             res.render('producto', contexto);
         });

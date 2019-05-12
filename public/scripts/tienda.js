@@ -1,5 +1,9 @@
 function paginaCargada() {
 
+  //Filtro por precio
+
+
+
   var listaProductos = [];
   // localStorage.removeItem('listaProductos');
   // localStorage.removeItem('identificador');
@@ -19,6 +23,19 @@ function paginaCargada() {
   }
 
   actualizarCarrito();
+
+  var barra = document.querySelector('.input-rango');
+  var precio = barra.value;
+  function actualizarPrecio() {
+    var iCategoria = document.querySelector(".indicador-categoria");
+    var valorICategoria = iCategoria.value;
+    console.log(precio);
+    if (valorICategoria) {
+      location.href = '/tienda/'+valorICategoria+'?precio=' + precio;
+    }
+    location.href = '/tienda?precio=' + precio;
+  }
+  barra.addEventListener('change', actualizarPrecio);
 
   var botones = document.querySelectorAll('.item__btn');
 

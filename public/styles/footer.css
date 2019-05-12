@@ -1,0 +1,73 @@
+.pie {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100px;
+  -ms-flex-preferred-size: 68px;
+      flex-basis: 68px;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 5%;
+  background: black;
+}
+
+.pie-a {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #00a7bd;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.pie__logo {
+  width: 30%;
+  height: 60%;
+  margin: 0;
+  padding: 0.7em;
+  margin-left: 40%;
+}
+
+.pie-redes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.pie__red-icono {
+  color: rebeccapurple;
+}
+
+.pie-linea {
+  width: 90%;
+  background: white;
+}
+
+.pie-contacto {
+  color: red;
+  margin-left: 5%;
+  padding: 1em;
+}
+/*# sourceMappingURL=footer.css.map */

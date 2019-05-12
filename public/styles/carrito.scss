@@ -9,66 +9,17 @@ body{
     font-size: 16px;
 }
 
-.menu{
-    display: flex;
-    height: 68px;
-    flex-basis: 68px;
-    flex-grow: 0;
-    flex-shrink: 0;
-    align-items: center;
-    font-size: 17px;
-    font-weight: bold;
-    position: absolute;
-    // background: rgba(255, 255, 255, 0.8);
-    //z-index: 10;
-    
-    &__logo{
-        width: 30%;
-        height: 60%;
-        margin: 0;
-        padding: .7em;
-        margin-left: 2em;      
-    }
-    
-    &-categoria {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: rgba($color: black, $alpha: 0.3);
-        padding: 0.8em;
-        position: absolute;
-        left: 210%;
-        top: -30%;
-        
-        &__icono {
-            
-        }
-        
-        &__texto {
-            font-size: 15px;
-        }
-    }
-    
-    &-sesion {
-        position: absolute;
-        left: 240%;
-        top: -11%; 
-        
-        &__texto {
-            font: black;
-        }
-    }
-    
-}
-
 .encabezado{
     width: 90%;
-    margin: auto;
-    
-    background: #00a7bd;
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    margin: auto;  
+    //background: #00a7bd;
     
     &__titulo{
+        font-family: 'Homemade Apple', cursive;
+        font-size: 30px;
         text-align: center;
     }
     
@@ -79,6 +30,9 @@ body{
 
 .carrito{
     width: 90%;
+    position: absolute;
+    top: 35%;
+    left: 5%;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -260,62 +214,6 @@ label{
         width: 60%;
     }
 }
-
-
-
-.pie{
-    display: flex;
-    height: 100px;
-    flex-basis: 68px;
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-direction: column;
-    //width: 100%;
-    //height: 20vh;
-    margin-top: 5%;
-    background: black;
-    
-    &-a{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        background: #00a7bd;
-        
-        flex-grow: 0;
-        flex-shrink: 0;
-    }
-    
-    &__logo{
-        width: 30%;
-        height: 60%;
-        margin: 0;
-        padding: 0.7em;
-        margin-left: 40%; 
-    }
-    
-    &-redes{
-        display: flex;
-        flex-direction: row;
-    }
-    
-    &__red-icono{
-        color: rebeccapurple;
-    }
-    
-    
-    &-linea{
-        width: 90%;
-        background: white;
-    }
-    
-    &-contacto{
-        color: red;
-        margin-left: 5%;
-        padding: 1em;
-    }  
-}
-
 
 .acciones-cantidad{
     display: flex;

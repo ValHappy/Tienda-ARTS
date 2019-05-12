@@ -29,6 +29,9 @@
         <i class="fas fa-shopping-cart fa-2x carrito__items"></i>
     </div>
 
+    <input type="hidden" class="indicador-categoria" value="{{categoria}}">
+
+
     <section class="banner">
         <div class="banner__orange">
             <article>
@@ -78,7 +81,9 @@
                 <li class="filtro__item"><a href="/tienda?tipo=destacado">DESTACADO</a></li>
                 <li class="filtro__item"><a href="/tienda">VER TODO SIN CATEGORIA</a></li>
                 {{/if}}
+
             </ul>
+                <input value="{{cantidad}}" class="input-rango" type="range" min="10000" max="30000">
         </div>
     </section>
 

@@ -170,6 +170,9 @@ function ejecutarPeticion() {
 function procesarPeticion(e) {
     if (peticion.readyState == 4) {
         var resultado = peticion.responseText;
+        document.querySelector('.pago-sin__info-nombre').value = "";
+        document.querySelector('.pago-sin__info-cc').value = "";
+        document.querySelector('.pago-sin__info-dir').value = "";
         var contenidoModal = document.querySelector('.modal-contenido__info');
         contenidoModal.innerHTML = '<p>' + resultado + '</p>'
         accionModal();

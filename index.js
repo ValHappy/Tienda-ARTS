@@ -17,21 +17,7 @@ const url = 'mongodb://localhost:27017';
 const dbName = 'tienda';
 const client = new MongoClient(url);
 
-var productos = [
-    {
-        titulo: 'Perro',
-        descripcion: 'hola',
-        precio: '15681',
-        tipo: 'nuevo',
-        foto: 'https://estaticos.muyinteresante.es/media/cache/760x570_thumb/uploads/images/article/5c3871215bafe83b078adbe3/perro.jpg'
-    },
-    {
-        titulo: 'Gato',
-        descripcion: 'Adios',
-        tipo: 'destacado',
-        foto: 'https://www.royalcanin.es/wp-content/uploads/2017/10/bigotesnew.jpg'
-    }
-];
+var cantidad = 1;
 
 app.get('/', function (request, response) {
     response.render('home');
@@ -49,12 +35,15 @@ app.get('/tienda/:categoria?/:id?', function (request, response) {
                 query.tipo = request.query.tipo;
             }
             if (request.query.precio) {
-                query.precio = { $lte: parseInt(request.query.precio) };
+                var miPrecio = parseInt(request.query.precio);
+                cantidad = miPrecio;
+                query.precio = { $lte: cantidad };
             }
             var context = {}
             consultar(query).then(docs => {
                 context.productos = docs;
                 context.categoria = query.categoria;
+                context.cantidad = cantidad;
                 query2 = { categoria: query.categoria };
                 return consultar(query2);
             }).then(docs => {
@@ -67,9 +56,16 @@ app.get('/tienda/:categoria?/:id?', function (request, response) {
         if (request.query.tipo) {
             query.tipo = request.query.tipo;
         }
+        if (request.query.precio) {
+            var miPrecio = parseInt(request.query.precio);
+            cantidad = miPrecio;
+            query.precio = { $lte: cantidad };
+        }
         consultar(query).then(docs => {
             var contexto = {
-                productos: docs
+                productos: docs,
+                categoria: '',
+                cantidad: cantidad
             };
             response.render('tienda', contexto);
         });

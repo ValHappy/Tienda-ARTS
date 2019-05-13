@@ -1,3 +1,10 @@
+$color-orange: #d78c2f;
+$color-light-orange: #f4dfd0;
+$color-orange-ppal: #fae7d7;
+$color-light-orange: #fff6ed;
+$color-blue: #d3dbca;
+$color-rose: #ff8e8e;
+$color-letras_arts: #dfc8ba;
 
 body{
     margin: 0;
@@ -8,7 +15,7 @@ body{
 .carrito{
     width: 10vh;
     height: 15vh;
-    background: rgb(255, 142, 142);
+    background: $color-rose;
     position: fixed;
     margin-top: 350px;
     right: 0%;
@@ -17,11 +24,11 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    
     &:hover{
         cursor: pointer;
     }
-
+    
     &__items{
         color: white;
         text-decoration: none;
@@ -37,8 +44,7 @@ body{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    // background: #d78c2f;
-
+    
     &__img{
         width: 40%;
         padding: 2em;
@@ -46,41 +52,36 @@ body{
         background-repeat: no-repeat;
         background-size: contain;
     }
-
+    
     &__info{
         width: 60%;
-        //background: blue;
-
     }
 }
 
 .producto-detallado{
-
+    
     &__nombre{
-        // background: rebeccapurple;
-        // font-family: 'Homemade Apple', cursive;
+        color: $color-blue;
         font-size: 30px;
         margin: 0.5em 0 0.5em 0;
     }
-
+    
     &__label{
         &-p{
-            //    background: red;
             margin-top: 0.5em;
         }
-
+        
         &-d{
-            // background: rebeccapurple;
             margin: 0;
         }
     }
-
+    
     &__precio{
-        // background: yellow;
+        color: $color-rose;
         margin-top: 0.5em;
         font-size: 20px;
     }
-
+    
     &__desc{
         // background: yellow;
         margin-top: 0.5em;
@@ -92,18 +93,38 @@ body{
     width: 100%;
     display: flex;
     flex-direction: row;
+    align-items: center;
     margin: 1em 0 1em 0;
-
-    &__cantidad{
-        width: 80%;
-        padding: 1em 0 1em 0;
-        // background: gray;
-
-        &-nombre{
-            margin: 0;
+    
+    &-cantidad{
+        display: flex;
+        align-items: center;
+        
+        &__btn{
+            text-align: center;
+            vertical-align: middle;
+            width: 25px;
+            height: 20px;
+            background: $color-letras_arts;
+            border: solid 1px $color-letras_arts;
+            
+            &:hover{
+                background: $color-orange; 
+                border: solid 1px $color-orange;
+                cursor: pointer; 
+            }
         }
+        
+        &__num{
+            width: 60px;
+            height: 20px;
+            vertical-align: middle;
+            border: solid 1px $color-letras_arts;
+            text-align: center;
+        }
+        
     }
-
+    
     &__btn{
         width: 100%;
         margin: 0;
@@ -117,14 +138,16 @@ body{
         transition-duration: 0.4s;
         cursor: pointer;
     }
-
+    
     &__btn1{
-        background-color: white;
-        color: #d78c2f;
-        border: 0.1em solid  #d78c2f;
-
+        width: 50%;
+        margin-left: 10%;
+        background-color: white; 
+        color: $color-letras_arts; 
+        border: 0.1em solid  $color-letras_arts;
+        
         &:hover {
-            background-color:  #d78c2f;
+            background-color: $color-letras_arts;
             color: white;
         }
     }

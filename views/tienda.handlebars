@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/styles/navbar.css">
     <link rel="stylesheet" href="/styles/tienda.css">
-    
+
     <title>Tienda ARTS | for artist lovers</title>
 </head>
 
@@ -94,19 +94,21 @@
                 <li class="filtro__item filtro__first"><a href="/tienda/{{categoria}}?tipo=promo">PROMOCIONES</a></li>
                 <li class="filtro__item"><a href="/tienda/{{categoria}}?tipo=nuevo">NUEVO</a></li>
                 <li class="filtro__item"><a href="/tienda/{{categoria}}?tipo=destacado">DESTACADO</a></li>
-                <li class="filtro__item"><a href="/tienda/{{categoria}}">VER TODO CON CATEGORIA</a></li>
+                <li class="filtro__item"><a href="/tienda/{{categoria}}">VER TODO</a></li>
                 {{else}}
                 <li class="filtro__item filtro__first"><a href="/tienda?tipo=promo">PROMOCIONES</a></li>
                 <li class="filtro__item"><a href="/tienda?tipo=nuevo">NUEVO</a></li>
                 <li class="filtro__item"><a href="/tienda?tipo=destacado">DESTACADO</a></li>
-                <li class="filtro__item"><a href="/tienda">VER TODO SIN CATEGORIA</a></li>
+                <li class="filtro__item"><a href="/tienda">VER TODO</a></li>
                 {{/if}}
 
             </ul>
-            <div>
+            <div class="input-contenedor">
                 <input value="{{precio}}" class="input-rango" type="range" min="10000" max="30000">
                 <output class="input-rango__salida">{{precio}}</output>
             </div>
+
+
         </div>
     </section>
 
@@ -115,7 +117,7 @@
         <ul class="contenedor__lista">
             {{#each productos}}
             <li class="contenedor__lista-item">
-                <a href="/tienda/producto/{{_id}}">
+                <a class="item__a" href="/tienda/producto/{{_id}}">
                     <input type="hidden" class="item__id" value="{{_id}}">
                     <img class="item__img" src="{{imagen}}">
                     <h3 class="item__nombre">{{nombre}}</h3>

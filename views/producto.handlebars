@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="/styles/navbar.css">
     <link rel="stylesheet" href="/styles/producto.css">
-    <title>Aiuda Detallado</title>
+    <title>Producto Detallado | {{nombre}}</title>
 </head>
 
 <body>
@@ -37,9 +37,10 @@
             </div>
 
             <div class="acciones">
-                <div class="acciones__cantidad">
-                    <p class="acciones__cantidad-nombre">Cantidad</p>
-                    <input class="acciones__cantidad-btn" type="number" min="1" max="100" value="{{cantidad}}" />
+                <div class="acciones-cantidad">
+                    <a class="acciones-cantidad__btn" onclick="actualizarCantidad(1)"><i class="fas fa-minus"></i></a>
+                    <p class="acciones-cantidad__num">{{cantidad}}</p>
+                    <a class="acciones-cantidad__btn" onclick="actualizarCantidad(2)"><i class="fas fa-plus"></i></a>
                 </div>
                 <button class="acciones__btn acciones__btn1">Agregar</button>
             </div>

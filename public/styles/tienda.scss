@@ -1,19 +1,20 @@
-$color-orange: #ee8d1f;
-$color-light-orange: #fff6ed;
+$color-orange: #d78c2f;
+$color-light-orange: #f4dfd0;
 $color-orange-ppal: #fae7d7;
 $color-light-orange: #fff6ed;
-$color-blue: #a8dce5;
+$color-blue: #d3dbca;
 $color-rose: #ff8e8e;
 $color-letras_arts: #dfc8ba;
+$tam-titulo: 35px;
+$tam-font: 18px;
 
 body{
     margin: 0;
     font-family: 'Comfortaa', cursive;
-    font-size: 16px;
+    font-size: $tam-font; 
 }
 
 .carrito{
-    
     width: 10vh;
     height: 15vh;
     background:$color-rose;
@@ -45,24 +46,26 @@ body{
     justify-content: center;
     
     &__arts{
-        color: black;
+        color: $color-letras_arts;
         margin: 0;
+        font-weight: bolder;
         letter-spacing: 10px;
         text-align: left;
+        font-size: 16px;
         
         &-a{
             position: relative;
-            top: 300px;
-            left: -50px;
+            top: 230px;
+            left: -120%;
         }
         
         &-b{
             position: relative;
             top: -257px;
-            left: 5px;
+            left: 40%;
         }
         
-        &-logo{
+        &-logo{  
             width: 40%;
             padding: 0;
             margin: 0;
@@ -85,7 +88,7 @@ body{
         display: flex;
         align-items: center;
         justify-content: center;
-        background: $color-orange;
+        background: $color-orange-ppal;
         margin-left: 25%;
         z-index: 6;
         position: relative;
@@ -112,6 +115,7 @@ body{
     &__img{
         width: 100%;
         height: 80%;
+        margin-right: 15%;
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
@@ -131,17 +135,16 @@ body{
     background: $color-light-orange;
     
     &__title {
-        // background: rebeccapurple;
         margin: 0;
         padding: 0.2em;
-        color: $color-orange;
+        color: $color-letras_arts;
         font-family: 'Homemade Apple', cursive;
-        font-size: 30px;
+        font-size: $tam-titulo;
     }
     
     &__desc{
-        width: 60%;
-        color: $color-orange;
+        width: 50%;
+        color: $color-letras_arts;
         margin: 0;
         padding: 0.4em;
         text-align: center;
@@ -150,27 +153,28 @@ body{
 
 .productos{
     width: 80%;
-    height: 150px;
+    height: 170px;
     margin: auto;
     position: relative;
     top: -300px;
-    //background: lightblue;
     
     &__title{
+        margin-top: 5%;
+        padding: 0;
         font-family: 'Homemade Apple', cursive;
         text-align: center;
-        color: black;
-        font-size: 30px;
+        color: $color-letras_arts;
+        font-size: $tam-titulo;
     }
 }
 
 .filtro{
     display: flex;
+    width: 100%;
     height: 50px;
     align-items: center;
     font-size: 15px;
     position: absolute;
-    background: #d78c2f;
     
     &__list{
         list-style-type: none;
@@ -190,15 +194,66 @@ body{
     
     &__item a{
         display: block;
-        color: black;
+        color: $color-letras_arts;
         text-align: center;
         padding: 0.5em;
         text-decoration: none;
     }
     
     &__item a:hover {
-        color: #d78c2f;
+        color: $color-orange;
     }
+}
+
+.input{
+    &-contenedor{
+        width: 15%;
+        margin-left: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    &-rango{
+        -webkit-appearance: none;
+        width: 100%;
+        height: 5px;
+        border-radius: 5px;
+        background: #d3d3d3;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+
+        &__salida{
+            color: $color-orange;
+            text-align: center;
+        }
+        
+        &:hover{
+            opacity: 1;
+        }
+    }
+}
+
+.input-rango::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: solid 2px white;
+    background: $color-letras_arts;
+    cursor: pointer;
+}
+
+.input-rango::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
 }
 
 .contenedor{
@@ -234,6 +289,10 @@ body{
 }
 
 .item{
+    &__a{
+        text-decoration: none;
+    }
+    
     &__img{
         width: 80%;
         padding: 1.5em;
@@ -243,12 +302,16 @@ body{
         text-align: center;
         font-size: 15px;
         padding: 0.2em;
+        color: $color-blue;
+        text-decoration: none;
         //background: #00a7bd;
     }
     
     &__precio{
         text-align: center;
         font-size: 14px;
+        text-decoration: none;
+        color: $color-rose;
         //background: #d78c2f;
     }
     
@@ -267,12 +330,13 @@ body{
     }
     
     &__btn1{
+        width: 100%;
         background-color: white; 
-        color: #d78c2f; 
-        border: 0.1em solid  #d78c2f;
+        color: $color-letras_arts; 
+        border: 0.1em solid  $color-letras_arts;
         
         &:hover {
-            background-color:  #d78c2f;
+            background-color: $color-letras_arts;
             color: white;
         }
     }
@@ -280,11 +344,11 @@ body{
     &__btn2{
         width: 50%;
         background-color: white; 
-        color: #d78c2f; 
-        border: 0.1em solid  #d78c2f;
+        color: $color-letras_arts; 
+        border: 0.1em solid  $color-letras_arts;
         
         &:hover {
-            background-color:  #d78c2f;
+            background-color: $color-letras_arts;
             color: white;
         }
     }

@@ -100,7 +100,6 @@ function actualizarCantidad(elemento, indicador) {
     localStorage.setItem('listaProductos', JSON.stringify(listaProductos));
     actualizarPantalla();
 }
-
 var botonRegistrar = document.querySelector('.pago-sin__btn');
 
 function registrar() {
@@ -195,30 +194,3 @@ window.onclick = function (event) {
         modal.style.display = "none";
     }
 }
-
-
-
-
-//LO DE GUARDAR UN PEDIDO (EL BOTON TIENE QUE SER TIPO SUBMIT)
-// var pedido = {
-//     correo: request.body.correo,
-//     contrasena: request.body.contrasena,
-//     fecha: new Date(),
-//     estado: 'nuevo',
-// };
-
-// var collection = db.collection('pedidos');
-// collection.insertOne(pedido, function(err){
-//     assert.equal(err, null);
-
-//     console.log('pedido guardado');
-// });
-
-// var contexto = {
-//     titulo: 'Página principal',
-//     mensaje: 'pedido guardado',
-// };
-
-
-// response.render('home', contexto);
-

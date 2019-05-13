@@ -1,9 +1,5 @@
 function paginaCargada() {
 
-  //Filtro por precio
-
-
-
   var listaProductos = [];
   // localStorage.removeItem('listaProductos');
   // localStorage.removeItem('identificador');
@@ -48,6 +44,8 @@ function paginaCargada() {
     salida.innerHTML = (precio + '').substring(0, 2) + '000';
   }
   barra.addEventListener('input', actualizarSalida);
+
+
 
   var botones = document.querySelectorAll('.item__btn');
 

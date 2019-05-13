@@ -1,5 +1,7 @@
 function paginaCargada() {
+
     var listaProductos = [];
+
     var carritoNum = document.querySelector('.carrito__items');
     if (localStorage.getItem('listaProductos') != null) {
         listaProductos = JSON.parse(localStorage.getItem('listaProductos'));
@@ -8,8 +10,8 @@ function paginaCargada() {
     var idEscondido = document.querySelector('.item__id').value;
     var producto = listaProductos.find(producto => producto._id == idEscondido);
     if (producto) {
-        var elementoCantidad = document.querySelector('.acciones__cantidad-btn');
-        elementoCantidad.value = producto.cantidad;
+        var elementoCantidad = document.querySelector('.acciones-cantidad__num');
+        elementoCantidad.innerHTML = producto.cantidad;
     }
 
     function actualizarCarrito() {
@@ -21,7 +23,6 @@ function paginaCargada() {
         // localStorage.removeItem('listaProductos');
         // listaProductos = [];
     }
-
 
     actualizarCarrito();
 
@@ -36,11 +37,12 @@ function paginaCargada() {
         var _id = document.querySelector('.item__id').value;
         var categoria = document.querySelector('.item__c').value;
         var tipo = document.querySelector('.item__t').value;
-        var cantidad = document.querySelector('.acciones__cantidad-btn').value;
+        var cantidad = document.querySelector('.acciones-cantidad__num').innerHTML;
         cantidad = parseInt(cantidad);
+
         var producto = listaProductos.find(producto => producto._id == _id);
         if (producto) {
-            producto.cantidad += cantidad;
+            producto.cantidad = cantidad;
         }
         else {
             var producto = {
@@ -61,3 +63,21 @@ function paginaCargada() {
 
 }
 window.addEventListener('load', paginaCargada);
+
+
+function actualizarCantidad(indicador) {
+
+    var _id = document.querySelector('.item__id').value;
+    var cantidad = document.querySelector('.acciones-cantidad__num').innerHTML;
+    cantidad = parseInt(cantidad);
+
+    if (indicador == 1) {
+        if (cantidad > 1) {
+            cantidad -= 1;
+        }
+    } else {
+        cantidad += 1;
+    }
+    document.querySelector('.acciones-cantidad__num').innerHTML = cantidad;
+
+}

@@ -11,7 +11,8 @@ $tam-font: 18px;
 body{
     margin: 0;
     font-family: 'Comfortaa', cursive;
-    font-size: $tam-font; 
+    font-size: $tam-font;
+    color: $color-letras_arts;
 }
 
 .carrito{
@@ -144,7 +145,6 @@ body{
     
     &__desc{
         width: 50%;
-        color: $color-letras_arts;
         margin: 0;
         padding: 0.4em;
         text-align: center;

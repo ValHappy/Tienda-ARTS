@@ -5,11 +5,15 @@ $color-light-orange: #fff6ed;
 $color-blue: #d3dbca;
 $color-rose: #ff8e8e;
 $color-letras_arts: #dfc8ba;
+$tam-titulo: 35px;
+$tam-font: 18px;
+$tam-peque: 13px;
 
 body{
     margin: 0;
     font-family: 'Comfortaa', cursive;
-    font-size: 16px;
+    font-size: $tam-font;
+    color: $color-letras_arts;
 }
 
 .carrito{
@@ -62,16 +66,20 @@ body{
     
     &__nombre{
         color: $color-blue;
-        font-size: 30px;
+        font-size: $tam-titulo;
         margin: 0.5em 0 0.5em 0;
     }
     
     &__label{
         &-p{
+            color: $color-orange;
+            font-size: $tam-peque;
             margin-top: 0.5em;
         }
         
         &-d{
+            color: $color-orange;
+            font-size: $tam-peque;
             margin: 0;
         }
     }
@@ -83,9 +91,7 @@ body{
     }
     
     &__desc{
-        // background: yellow;
         margin-top: 0.5em;
-        font-size: 17px;
     }
 }
 
@@ -105,19 +111,26 @@ body{
             vertical-align: middle;
             width: 25px;
             height: 20px;
-            background: $color-letras_arts;
+            background: white;
             border: solid 1px $color-letras_arts;
+            color: $color-letras_arts;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
             
             &:hover{
-                background: $color-orange; 
-                border: solid 1px $color-orange;
+                background: $color-letras_arts; 
+                border: solid 1px $color-letras_arts;
                 cursor: pointer; 
+                color: white;
             }
         }
         
         &__num{
+            color: $color-blue;
+            font-weight: bolder;
             width: 60px;
             height: 20px;
+            font-size: 15px;
             vertical-align: middle;
             border: solid 1px $color-letras_arts;
             text-align: center;

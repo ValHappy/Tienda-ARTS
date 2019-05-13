@@ -5,11 +5,14 @@ $color-light-orange: #fff6ed;
 $color-blue: #d3dbca;
 $color-rose: #ff8e8e;
 $color-letras_arts: #dfc8ba;
+$tam-titulo: 35px;
+$tam-font: 16px;
+$tam-peque: 13px;
 
 body{
     margin: 0;
     font-family: 'Comfortaa', cursive;
-    font-size: 16px;
+    font-size: $tam-font;
 }
 
 .encabezado{
@@ -22,12 +25,19 @@ body{
     
     &__titulo{
         font-family: 'Homemade Apple', cursive;
-        font-size: 30px;
+        font-size: $tam-titulo;
         text-align: center;
+        margin: 0;
     }
     
     &__continuar{
         text-align: end;
+        color: $color-rose;
+    }
+    
+    &__a{
+        color: $color-rose;
+        text-decoration: none;
     }
 }
 
@@ -46,6 +56,7 @@ body{
     
     &__resumen{
         width: 30%;
+        height: 100%;
         border: solid 1px rgba(0, 0, 0, 0.2);
         padding: 1.5em;
         
@@ -68,6 +79,9 @@ body{
 }
 
 .producto{
+    &__a{
+        text-decoration: none;
+    }
     
     &__contenedor{
         width: 90%;
@@ -88,21 +102,21 @@ body{
     &__nombre{
         font-size: 20px;
         padding: 0.5em 0 0.5em 0;
-        color: wheat;
+        color: $color-blue;
         //background: #00a7bd;
     }
     
     &__tipo{
-        font-size: 12px;
+        font-size: $tam-peque;
         margin: 0;
         padding: 0.1em;
-        color: wheat;
+        color: $color-letras_arts;
         //background: #00a7bd;
     }
     
     &__precio{
         font-size: 15px;
-        color: red;
+        color: $color-rose;
     }  
     
     &__x{
@@ -129,7 +143,7 @@ body{
 
 .pago-sin{
     width: 100%;
-    height: 55vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     margin-top: 5%;
@@ -144,12 +158,103 @@ body{
         //background: #fff6ed;
         display: flex;
         flex-direction: column;
+        
+        
+        &-nombre{
+            width: 140px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            background-color: white;
+            padding: 0.5em;
+            -webkit-transition: width 0.4s ease-in-out;
+            transition: width 0.4s ease-in-out;
+            
+            &:focus{
+                width: 100%;
+            }
+        }
+        
+        &-cc{
+            width: 140px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            background-color: white;
+            padding: 0.5em;
+            -webkit-transition: width 0.4s ease-in-out;
+            transition: width 0.4s ease-in-out;
+            
+            &:focus{
+                width: 100%;
+            }
+        }
+        
+        &-dir{
+            width: 140px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            background-color: white;
+            padding: 0.5em;
+            -webkit-transition: width 0.4s ease-in-out;
+            transition: width 0.4s ease-in-out;
+            
+            &:focus{
+                width: 100%;
+            }
+        }
     }
     
     &__btn{
-        width: 60%;
+        width: 80%;      
+        margin: 1em;
+        padding: 0.5em;
+        border-radius: 12em;
+        text-align: center;
+        font-size: 13px;
+        font-weight: bold;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+    
+    &__btn1{
+        background-color: white; 
+        color: $color-letras_arts; 
+        border: 0.1em solid  $color-letras_arts;
+        
+        &:hover {
+            background-color: $color-letras_arts;
+            color: white;
+        }
     }
 }
+
+
+.pago-sin__info-medio {
+    border-radius: 4px;
+    
+    &:after{
+        position: absolute;
+        content: "";
+        top: 14px;
+        right: 10px;
+        width: 0;
+        height: 0;
+        border: 6px solid transparent;
+        border-color: #fff transparent transparent transparent;
+    }
+}
+
+.pago-sin__info-medio-items div,.pago-sin__info-medio {
+    color: $color-letras_arts;
+    padding: 8px 16px;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    user-select: none;
+}
+
 
 label{
     padding: 0.5em;
@@ -188,29 +293,6 @@ label{
     }
 }
 
-.pago-con{
-    width: 100%;
-    height: 35vh;
-    display: flex;
-    flex-direction: column;
-    margin-top: 10%;
-    background: #fcfcfc;
-    -webkit-box-shadow: 9px 9px 10px -3px rgba(0,0,0,0.2);
-    -moz-box-shadow: 9px 9px 10px -3px rgba(0,0,0,0.2);
-    box-shadow: 9px 9px 10px -3px rgba(0,0,0,0.2);
-    
-    &__info{
-        padding: 1em;
-        width: 80%;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    &__btn{
-        width: 60%;
-    }
-}
-
 .acciones-cantidad{
     display: flex;
     align-items: center;
@@ -220,24 +302,30 @@ label{
         vertical-align: middle;
         width: 25px;
         height: 20px;
-        background: $color-letras_arts;
+        background: white;
         border: solid 1px $color-letras_arts;
+        color: $color-letras_arts;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
         
         &:hover{
-            background: $color-orange; 
-            border: solid 1px $color-orange;
+            background: $color-letras_arts; 
+            border: solid 1px $color-letras_arts;
             cursor: pointer; 
+            color: white;
         }
     }
     
     &__num{
+        color: black;
+        font-weight: bolder;
         width: 60px;
         height: 20px;
+        font-size: 15px;
         vertical-align: middle;
         border: solid 1px $color-letras_arts;
         text-align: center;
     }
-    
 }
 
 .modal {
@@ -251,27 +339,27 @@ label{
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content/Box */
-  .modal-contenido {
+}
+
+/* Modal Content/Box */
+.modal-contenido {
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
     width: 50%; /* Could be more or less, depending on screen size */
-  }
-  
-  /* The Close Button */
-  .cerrar {
+}
+
+/* The Close Button */
+.cerrar {
     color: #aaa;
     float: right;
     font-size: 18px;
     font-weight: bold;
-
+    
     &:hover, &:focus {
         color: black;
         text-decoration: none;
         cursor: pointer;
     }
-  }
+}

@@ -17,7 +17,7 @@ function actualizarPantalla() {
             '<div class="producto__contenedor">' +
             '<img class="producto__img" src="' + producto.imagen + '" alt="">' +
             '<div class="producto__contenido">' +
-            '<a href="/tienda/producto/'+producto._id+'" ><h3 class="producto__nombre">' + producto.nombre + '</h3></a>' +
+            '<a class="producto__a" href="/tienda/producto/'+producto._id+'" ><h3 class="producto__nombre">' + producto.nombre + '</h3></a>' +
             '<h3 class="producto__tipo">' + producto.tipo + '</h3>' +
             '<p class="producto__precio">$' + producto.precio + '</p>' +
             '<input type="hidden" class="producto__id" value="' + producto._id + '"></input>' +

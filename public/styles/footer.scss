@@ -1,44 +1,59 @@
 
 .pie{
     display: flex;
-    height: 100px;
-    flex-basis: 68px;
-    flex-grow: 0;
-    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
     flex-direction: column;
-    //width: 100%;
-    //height: 20vh;
-    margin-top: 5%;
+    margin-top: 1%;
     background: black;
+    // align-items: center;
+
+    // position: absolute;
+    // top: 100%;
     
     &-a{
         width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: row;
         align-items: center;
-        background: #00a7bd;
-        
-        flex-grow: 0;
-        flex-shrink: 0;
     }
     
     &__logo{
-        width: 30%;
-        height: 60%;
         margin: 0;
-        padding: 0.7em;
+        padding: 1em;
         margin-left: 40%; 
+        
+        &-c{
+            width: 50%;
+            height: 50%;
+        }
     }
     
     &-redes{
         display: flex;
         flex-direction: row;
+        width: 50%;
+        height: 100%;
+        margin: 0;
+        padding: 0.7em;
+        margin-left: 60%; 
+
     }
     
     &__red-icono{
-        color: rebeccapurple;
+        padding: 0.5em;
+        
+        &-a{
+            width: 20%;
+            text-decoration: none;
+            color: #888;
+
+            &:hover{
+                color: white;
+            }
+        }
     }
-    
     
     &-linea{
         width: 90%;
@@ -46,7 +61,7 @@
     }
     
     &-contacto{
-        color: red;
+        color: white;
         margin-left: 5%;
         padding: 1em;
     }  

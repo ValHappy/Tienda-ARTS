@@ -5,6 +5,7 @@ $color-light-orange: #fff6ed;
 $color-blue: #d3dbca;
 $color-rose: #ff8e8e;
 $color-letras_arts: #dfc8ba;
+$color-font: #888; 
 $tam-titulo: 35px;
 $tam-font: 18px;
 
@@ -12,7 +13,7 @@ body{
     margin: 0;
     font-family: 'Comfortaa', cursive;
     font-size: $tam-font;
-    color: $color-letras_arts;
+    color: $color-font;
 }
 
 .carrito{
@@ -79,7 +80,6 @@ body{
             -ms-transform: rotate(270deg);
             -o-transform: rotate(270deg);
             transform: rotate(270deg);
-            
         }
     }
     
@@ -225,7 +225,7 @@ body{
         opacity: 0.7;
         -webkit-transition: .2s;
         transition: opacity .2s;
-
+        
         &__salida{
             color: $color-orange;
             text-align: center;
@@ -315,6 +315,11 @@ body{
         //background: #d78c2f;
     }
     
+    &__mini-texto{
+        margin: 0;
+        margin-top: 5%;
+    }
+    
     &__btn{
         width: 100%;      
         margin: 0;
@@ -351,10 +356,168 @@ body{
             background-color: $color-letras_arts;
             color: white;
         }
+    }    
+}
+
+@media (max-width: 360px){
+    $tam-titulo-responsive: 30px;
+    $tam-font-responsive: 13px;
+
+    .body{
+        font-size: $tam-font-responsive;
+    }
+    
+    .carrito{
+        z-index: 20;
+        right: 10px;
+    }
+    
+    .banner{
+        width: 100%;
+        height: 130vh;
+        
+        &__arts{
+            letter-spacing: 7px;
+            
+            &-a{
+                position: relative;
+                font-size: 11px;
+                top: 320px;
+                left: -40%;
+                z-index: 10;
+                
+            }
+            
+            &-b{
+                position: relative;
+                font-size: 11px;
+                top: -215px;
+                left: 0%;
+                
+            }
+            
+            &-logo{  
+                width: 40%;
+                height: 6%; 
+                top: 50%;
+                left: -10%;              
+            }
+        }
+        
+        &__orange{
+            width: 100%;
+            margin-left: 0;
+        }
+        
+        &__blue{
+            width: 80%;
+            height: 65%;
+            margin-left: -15%;
+        }
+        
+        &__img{
+            
+            &-producto{
+                width: 200px;
+            }
+        }
+    }
+    
+    .info{
+        width: 360px;
+        &__title{
+            font-size: $tam-titulo-responsive; 
+        }
+        
+        &__desc{
+            width: 70%;
+            font-size: $tam-font-responsive;
+        }
+    }
+
+    .productos{
+        &__title{
+            font-size: $tam-titulo-responsive;
+        }
+    }
+    
+    .contenedor{
+        width: 100%;
+        
+        &__lista{
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+        
+        &-item{
+            background: #4CAF50;
+            width: 90%;
+            
+        }
     }
     
     
+    .item{
+        width: 90%;
+        &__a{
+            text-decoration: none;
+        }
+        
+        &__img{
+            width: 100%;
+            padding: 1.5em;
+        }
+        
+        &__nombre{
+            text-align: center;
+            font-size: $tam-font-responsive;
+            padding: 0.2em;
+            color: $color-blue;
+            text-decoration: none;
+            //background: #00a7bd;
+        }
+        
+        &__precio{
+            text-align: center;
+            font-size: $tam-font-responsive;
+            text-decoration: none;
+            color: $color-rose;
+        }
+        
+        &__mini-texto{
+            margin: 0;
+            margin-top: 5%;
+        }
+        
+        &__btn{
+            width: 100%;      
+            margin: 0;
+            margin-top: 1.5em;
+            padding: 0.5em;
+            border-radius: 5em;
+            text-align: center;
+            font-size: $tam-font-responsive;
+            font-weight: bold;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+        
+        &__btn1{
+            width: 100%;
+            border: 0.1em solid  $color-letras_arts;
+            background-color: $color-letras_arts;
+            color: white;
+            
+            &:hover {
+            }
+        }
+        
+        &__btn2{
+            width: 50%;
+            border: 0.1em solid  $color-letras_arts;
+            background-color: $color-letras_arts;
+            color: white;
+        }    
+    }
 }
-
-
-

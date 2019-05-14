@@ -25,16 +25,19 @@
     {{> navbar}}
 
     <div class="carrito" onclick="location.href='/carrito'">
+
         <a class="carrito__items">0</a>
         <br>
         <i class="fas fa-shopping-cart fa-2x carrito__items"></i>
+
     </div>
 
     <input type="hidden" class="indicador-categoria" value="{{categoria}}">
 
-
     <section class="banner">
+
         <div class="banner__orange">
+
             <article>
                 <p class="banner__arts banner__arts-a">A</p>
                 <p class="banner__arts banner__arts-a">AR</p>
@@ -45,6 +48,7 @@
             <img class="banner__arts-logo" src="/img/logo.png" alt="">
 
             <div class="banner__blue">
+
                 <article>
                     <p class="banner__arts banner__arts-b ">ARTS </p>
                     <p class="banner__arts banner__arts-b">ART</p>
@@ -53,6 +57,7 @@
                 </article>
 
                 <div class="banner__img">
+
                     {{#if productoGeneral}}
                     <input type="hidden" class="item__nombre" value="{{productoGeneral.nombre}}">
                     <input type="hidden" class="item__precio" value="${{productoGeneral.precio}}">
@@ -60,7 +65,7 @@
                     <input type="hidden" class="item__id" value="{{productoGeneral._id}}">
                     <input type="hidden" class="item__c" value="{{productoGeneral.categoria}}">
                     <input type="hidden" class="item__t" value="{{productoGeneral.tipo}}">
-                    <img src="{{productoGeneral.imagen}}" alt="">
+                    <img class="banner__img-producto"src="{{productoGeneral.imagen}}" alt="">
                     {{else}}
                     <input type="hidden" class="item__nombre" value="{{productoC.nombre}}">
                     <input type="hidden" class="item__precio" value="${{productoC.precio}}">
@@ -68,27 +73,37 @@
                     <input type="hidden" class="item__id" value="{{productoC._id}}">
                     <input type="hidden" class="item__c" value="{{productoC.categoria}}">
                     <input type="hidden" class="item__t" value="{{productoC.tipo}}">
-                    <img src="{{productoC.imagen}}" alt="">
+                    <img class="banner__img-producto"src="{{productoC.imagen}}" alt="">
                     {{/if}}
+                    <p class="item__mini-texto">Lo más vendido</p>
                     <button class="item__btn item__btn2">Agregar al carrito</button>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
 
     <section class="info">
+
         <h2 class="info__title">Arts</h2>
         <p class="info__desc">ARTS, for artist lovers es una empresa con la distribución de las más conocidas marcas
             mundiales de productos para hacer arte, arquitectura, diseño y hobbies. Todo el conocimiento y experiencia
             han sido trasladados a sus descendientes, y hoy adaptandonos a la modernización tecnológica y a las
             necesidades de nuestros clientes.
         </p>
+
     </section>
 
     <section class="productos">
+
         <h2 class="productos__title">Productos</h2>
+
         <div class="filtro">
+
             <ul class="filtro__list">
                 {{#if categoria }}
                 <li class="filtro__item filtro__first"><a href="/tienda/{{categoria}}?tipo=promo">PROMOCIONES</a></li>
@@ -103,20 +118,22 @@
                 {{/if}}
 
             </ul>
+
             <div class="input-contenedor">
                 <input value="{{precio}}" class="input-rango" type="range" min="10000" max="30000">
                 <output class="input-rango__salida">{{precio}}</output>
             </div>
 
-
         </div>
+
     </section>
 
-    <!--mi lista-->
     <section class="contenedor">
+
         <ul class="contenedor__lista">
             {{#each productos}}
             <li class="contenedor__lista-item">
+
                 <a class="item__a" href="/tienda/producto/{{_id}}">
                     <input type="hidden" class="item__id" value="{{_id}}">
                     <img class="item__img" src="{{imagen}}">
@@ -126,12 +143,15 @@
                     <input type="hidden" class="item__t" value="{{tipo}}">
                 </a>
                 <button class="item__btn item__btn1">Agregar al carrito</button>
+
             </li>
             {{/each}}
         </ul>
+
     </section>
 
     <script src="/scripts/tienda.js"></script>
+
 </body>
 
 </html>

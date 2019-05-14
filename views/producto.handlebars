@@ -19,37 +19,49 @@
     {{> navbar}}
 
     <div class="carrito" onclick="location.href='/carrito'">
+
         <a class="carrito__items">0</a>
         <br>
         <i class="fas fa-shopping-cart fa-2x carrito__items"></i>
+
     </div>
 
     <section class="vista-detallada">
+
         <img src="{{imagen}}" alt="" class="vista-detallada__img">
         <section class="vista-detallada__info">
+
             <div class="producto-detallado">
+
                 <h3 class="producto-detallado__nombre">{{nombre}}</h3>
                 <label class="producto-detallado__label-p">Precio</label>
                 <p class="producto-detallado__precio">${{precio}}</p>
                 <input type="hidden" class="item__id" value="{{_id}}">
                 <input type="hidden" class="item__c" value="{{categoria}}">
                 <input type="hidden" class="item__t" value="{{tipo}}">
+
             </div>
 
             <div class="acciones">
+
                 <div class="acciones-cantidad">
                     <a class="acciones-cantidad__btn" onclick="actualizarCantidad(1)"><i class="fas fa-minus"></i></a>
                     <p class="acciones-cantidad__num">{{cantidad}}</p>
                     <a class="acciones-cantidad__btn" onclick="actualizarCantidad(2)"><i class="fas fa-plus"></i></a>
                 </div>
                 <button class="acciones__btn acciones__btn1">Agregar</button>
+
             </div>
 
             <label class="producto-detallado__label-d">Descripcion</label>
             <p class="producto-detallado__desc">{{descripcion}}</p>
+
         </section>
+
     </section>
+
     <script src="/scripts/producto.js"></script>
+    
 </body>
 
 </html>

@@ -5,6 +5,7 @@ $color-light-orange: #fff6ed;
 $color-blue: #d3dbca;
 $color-rose: #ff8e8e;
 $color-letras_arts: #dfc8ba;
+$color-font: #888; 
 $tam-titulo: 35px;
 $tam-font: 18px;
 $tam-peque: 13px;
@@ -13,7 +14,7 @@ body{
     margin: 0;
     font-family: 'Comfortaa', cursive;
     font-size: $tam-font;
-    color: $color-letras_arts;
+    color: $color-font;
 }
 
 .carrito{
@@ -126,7 +127,7 @@ body{
         }
         
         &__num{
-            color: $color-blue;
+            color: $color-font;
             font-weight: bolder;
             width: 60px;
             height: 20px;
@@ -164,4 +165,56 @@ body{
             color: white;
         }
     }
+}
+
+@media (max-width: 360px){
+    $tam-titulo-responsive: 30px;
+    $tam-font-responsive: 13px;
+
+    body{
+        font-size: $tam-font-responsivet;
+    }
+
+    .carrito{
+        //z-index: 20;
+    }
+
+    .vista-detallada{
+        width: 100%;
+        
+        &__img{
+            width: 30%;
+            padding: 2em;
+        }
+        
+        &__info{
+            width: 70%;
+        }
+    }
+
+    .producto-detallado{
+    
+        &__nombre{
+            font-size: $tam-titulo-responsive;
+        }
+        
+        &__label{
+            &-p{
+                font-size: 10px;
+            }
+            
+            &-d{
+                font-size: 10px;
+            }
+        }
+        
+        &__precio{
+            font-size: $tam-font-responsive;
+        }
+        
+        &__desc{
+            margin-top: 0.5em;
+        }
+    }
+    
 }

@@ -55,7 +55,7 @@
   font-size: 16px;
   border: none;
   cursor: pointer;
-  background: rgba(0, 0, 0, 0.3);
+  background: #dfc8ba;
   margin-left: 1%;
 }
 
@@ -98,5 +98,21 @@
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {
   display: block;
+}
+
+@media (max-width: 360px) {
+  .body {
+    font-size: 9px;
+  }
+  .menu {
+    background: white;
+  }
+  .menu__logo {
+    height: 45%;
+    margin-left: 0.5em;
+  }
+  .dropbtn {
+    margin-left: 189%;
+  }
 }
 /*# sourceMappingURL=navbar.css.map */

@@ -90,10 +90,32 @@ $color-letras_arts: #dfc8ba;
 .dropdown-content a:hover {
     color: white;
     background: $color-letras_arts;
-
+    
 }
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {
     display:block;
+}
+
+@media (max-width: 360px){
+    .body{
+        font-size: 9px;
+    }
+    
+    .menu{
+        background: white;
+        
+        &__logo{
+            height: 45%;
+            margin-left: 0.5em;
+        }
+
+    }
+
+    .dropbtn {
+        
+        margin-left: 189%;
+    }
+  
 }

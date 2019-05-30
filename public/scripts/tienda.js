@@ -95,7 +95,9 @@ function paginaCargada() {
   }
   botones.forEach(recorrerBotones);
 
-
+  // var tamScreen = window.innerWidth;
+  // var item_diseno = document.querySelector(".item__diseno");
+  // TweenMax.to(item_diseno, 0, { x: tamScreen-500 });
 }
 window.addEventListener('load', paginaCargada);
 
@@ -117,3 +119,35 @@ window.onclick = function (event) {
     }
   }
 }
+
+//Green socks
+
+var btnCategoria = document.querySelector(".dropbtn");
+var menuNav = document.querySelector(".menu__nav");
+var aparece = false;
+
+var item_diseno = document.querySelector(".item__diseno");
+var item_arte = document.querySelector(".item_arte");
+var item_papeleria = document.querySelector(".item__papeleria");
+var item_escritura = document.querySelector(".item__escritura");
+var item_arquitectura = document.querySelector(".item__arquitectura");
+
+function eventoBarra() {
+
+  if (aparece == false) {
+    TweenMax.to(menuNav, 0.5, { y: 720 });
+    aparece = true;
+
+    TweenMax.to(item_diseno, 0.9, {opacity: 1, x: -130});
+    
+  }else{
+    TweenMax.to(menuNav, 1, { y: -720 });
+    aparece = false;
+
+    TweenMax.to(item_diseno, 0.4, {opacity: 0, x: -400});
+  }
+  
+  console.log("funcionaaaa");
+
+}
+btnCategoria.addEventListener("click", eventoBarra);

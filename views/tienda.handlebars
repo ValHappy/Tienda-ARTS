@@ -66,7 +66,7 @@
                     <input type="hidden" class="item__id" value="{{productoGeneral._id}}">
                     <input type="hidden" class="item__c" value="{{productoGeneral.categoria}}">
                     <input type="hidden" class="item__t" value="{{productoGeneral.tipo}}">
-                    <img class="banner__img-producto"src="{{productoGeneral.imagen}}" alt="">
+                    <img class="banner__img-producto" src="{{productoGeneral.imagen}}" alt="">
                     {{else}}
                     <input type="hidden" class="item__nombre" value="{{productoC.nombre}}">
                     <input type="hidden" class="item__precio" value="${{productoC.precio}}">
@@ -74,7 +74,7 @@
                     <input type="hidden" class="item__id" value="{{productoC._id}}">
                     <input type="hidden" class="item__c" value="{{productoC.categoria}}">
                     <input type="hidden" class="item__t" value="{{productoC.tipo}}">
-                    <img class="banner__img-producto"src="{{productoC.imagen}}" alt="">
+                    <img class="banner__img-producto" src="{{productoC.imagen}}" alt="">
                     {{/if}}
                     <p class="item__mini-texto">Lo más vendido</p>
                     <button class="item__btn item__btn2">Agregar al carrito</button>
@@ -106,6 +106,7 @@
         <div class="filtro">
 
             <ul class="filtro__list">
+
                 {{#if categoria }}
                 <li class="filtro__item filtro__first"><a href="/tienda/{{categoria}}?tipo=promo">PROMOCIONES</a></li>
                 <li class="filtro__item"><a href="/tienda/{{categoria}}?tipo=nuevo">NUEVO</a></li>
@@ -151,9 +152,9 @@
 
     </section>
 
-    {{> footer}}
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <script src="/scripts/tienda.js"></script>
+
 
 </body>
 

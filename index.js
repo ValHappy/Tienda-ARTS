@@ -46,7 +46,8 @@ app.get('/tienda/:categoria?/:id?', function (request, response) {
                 context.precio = precio;
                 query2 = { categoria: query.categoria };
                 return consultar(query2);
-            }).then(docs => {precio
+            }).then(docs => {
+                precio
                 context.productoC = docs[0];
                 response.render('tienda', context);
             }).catch(error => { });
@@ -63,7 +64,7 @@ app.get('/tienda/:categoria?/:id?', function (request, response) {
         }
         var contexto = {};
         consultar(query).then(docs => {
-            contexto.productos =  docs;
+            contexto.productos = docs;
             contexto.categoria = '';
             contexto.precio = precio;
             return consultar({});
@@ -90,6 +91,15 @@ app.post('/carrito/comprar', function (request, response) {
     client.connect(function (err) {
         assert.equal(null, err);
         const db = client.db(dbName);
+
+        //Llamar la db
+        // const fs = require('fs');
+        // var collection = db.collection('productos');
+        // collection.find({}).toArray(function (err, docs) {
+        //     fs.writeFileSync('db.json', JSON.stringify(docs));
+        // });
+
+
         const collection = db.collection('pedidos');
         collection.insertOne(pedido, function (err) {
             assert.equal(err, null);
@@ -149,6 +159,9 @@ async function consultar(query) {
         // client.close();
     });
 }
+
+
+
 
 console.log("Servidor iniciado...");
 app.listen(3000);

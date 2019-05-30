@@ -127,7 +127,7 @@ var menuNav = document.querySelector(".menu__nav");
 var aparece = false;
 
 var item_diseno = document.querySelector(".item__diseno");
-var item_arte = document.querySelector(".item_arte");
+var item_arte = document.querySelector(".item__arte");
 var item_papeleria = document.querySelector(".item__papeleria");
 var item_escritura = document.querySelector(".item__escritura");
 var item_arquitectura = document.querySelector(".item__arquitectura");
@@ -135,16 +135,24 @@ var item_arquitectura = document.querySelector(".item__arquitectura");
 function eventoBarra() {
 
   if (aparece == false) {
-    TweenMax.to(menuNav, 0.5, { y: 720 });
+    TweenMax.to(menuNav, 0.8, {width: "100%", right: "0"});
     aparece = true;
 
-    TweenMax.to(item_diseno, 0.9, {opacity: 1, x: -130});
+    TweenMax.to(item_diseno, 1, {opacity: 1, x: -170});
+    TweenMax.to(item_arte, 1, {opacity: 1, x: -165});
+    TweenMax.to(item_papeleria, 1, {opacity: 1, x: -160});
+    TweenMax.to(item_escritura, 1, {opacity: 1, x: -155});
+    TweenMax.to(item_arquitectura, 1, {opacity: 1, x: -150});
     
   }else{
-    TweenMax.to(menuNav, 1, { y: -720 });
+    TweenMax.to(menuNav, 1, {width: "0", left: "0"});
     aparece = false;
 
-    TweenMax.to(item_diseno, 0.4, {opacity: 0, x: -400});
+    TweenMax.to(item_diseno, 0.5, {opacity: 0, x: 400});
+    TweenMax.to(item_arte, 0.5, {opacity: 0, x: 350});
+    TweenMax.to(item_papeleria, 0.5, {opacity: 0, x: 300});
+    TweenMax.to(item_escritura, 0.5, {opacity: 0, x: 250});
+    TweenMax.to(item_arquitectura, 0.5, {opacity: 0, x: 200});
   }
   
   console.log("funcionaaaa");

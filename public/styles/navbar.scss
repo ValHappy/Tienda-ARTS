@@ -24,16 +24,15 @@ $color-letras_arts: #dfc8ba;
     }
     
     &__nav{
-     width: 100%;
-     height: 100%;
-     display: flex;
-     justify-content: center;
-     position: absolute;
-     z-index: 14;
-     top: -100%;
-     background: white;
+        position: fixed;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        z-index: 14;
+        background: white;
+        right: 0;
     }
-
+    
     &__categoria {
         display: flex; 
         justify-content: center;
@@ -46,7 +45,7 @@ $color-letras_arts: #dfc8ba;
         list-style: none;
         // right: 13%;
         right: 0;
-
+        
         
         &__texto {
             font-size: 15px;
@@ -59,16 +58,15 @@ $color-letras_arts: #dfc8ba;
     padding: 1.5em;
     opacity: 0;
     //background: #ff8e8e;
-
+    
     & a{
         color: inherit;
         text-decoration: none;
     }
-
-    &__arte{
-        
-    }
     
+    &:hover{
+        text-decoration: underline;
+    }
 }
 
 .dropbtn {
@@ -140,12 +138,12 @@ $color-letras_arts: #dfc8ba;
             height: 45%;
             margin-left: 0.5em;
         }
-
+        
     }
-
+    
     .dropbtn {
         
         margin-left: 189%;
     }
-  
+    
 }

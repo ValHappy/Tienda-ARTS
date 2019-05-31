@@ -1,5 +1,5 @@
 function paginaCargada() {
-
+  
   var listaProductos = [];
   // localStorage.removeItem('listaProductos');
   // localStorage.removeItem('identificador');
@@ -7,7 +7,7 @@ function paginaCargada() {
   if (localStorage.getItem('listaProductos') != null) {
     listaProductos = JSON.parse(localStorage.getItem('listaProductos'));
   }
-
+  
   function actualizarCarrito() {
     var nuevaCantidad = 0;
     listaProductos.forEach(producto => {
@@ -17,9 +17,9 @@ function paginaCargada() {
     // localStorage.removeItem('listaProductos');
     // listaProductos = [];
   }
-
+  
   actualizarCarrito();
-
+  
   var barra = document.querySelector('.input-rango');
   var precioNuevo = barra.value;
   var salida = document.querySelector('.input-rango__salida');
@@ -36,7 +36,7 @@ function paginaCargada() {
     location.href = '/tienda?precio=' + precio;
   }
   barra.addEventListener('change', actualizarPrecio);
-
+  
   function actualizarSalida() {
     var precio = barra.value;
     var salida = document.querySelector('.input-rango__salida');
@@ -44,15 +44,15 @@ function paginaCargada() {
     salida.innerHTML = (precio + '').substring(0, 2) + '000';
   }
   barra.addEventListener('input', actualizarSalida);
-
-
-
+  
+  
+  
   var botones = document.querySelectorAll('.item__btn');
-
+  
   function recorrerBotones(boton) {
-
+    
     function agregarAlCarrito() {
-
+      
       var padre = boton.parentNode;
       var nombre = padre.querySelector('.item__nombre').innerText;
       if (!nombre) {
@@ -71,7 +71,7 @@ function paginaCargada() {
       var _id = padre.querySelector('.item__id').value;
       var categoria = padre.querySelector('.item__c').value;
       var tipo = padre.querySelector('.item__t').value;
-
+      
       var producto = listaProductos.find(producto => producto._id == _id);
       if (producto) {
         producto.cantidad += 1;
@@ -94,7 +94,7 @@ function paginaCargada() {
     boton.addEventListener('click', agregarAlCarrito);
   }
   botones.forEach(recorrerBotones);
-
+  
   // var tamScreen = window.innerWidth;
   // var item_diseno = document.querySelector(".item__diseno");
   // TweenMax.to(item_diseno, 0, { x: tamScreen-500 });
@@ -134,49 +134,49 @@ var item_arquitectura = document.querySelector(".item__arquitectura");
 var item_todo = document.querySelector(".btn");
 
 function eventoBarra() {
-
+  
   if (aparece == false) {
-    TweenMax.to(menuNav, 0.8, {width: "100%", right: "0"});
+    TweenMax.to(menuNav, 0.8, { width: "100%", right: "0" });
     aparece = true;
-
-    TweenMax.to(item_todo, 1, {display: "block", opacity: 1});
-
-    TweenMax.to(item_diseno, 1, {opacity: 1, x: -170});
-    TweenMax.to(item_arte, 1, {opacity: 1, x: -165});
-    TweenMax.to(item_papeleria, 1, {opacity: 1, x: -160});
-    TweenMax.to(item_escritura, 1, {opacity: 1, x: -155});
-    TweenMax.to(item_arquitectura, 1, {opacity: 1, x: -150});
     
-  }else{
-    TweenMax.to(menuNav, 1, {width: "0", left: "0"});
+    TweenMax.to(item_todo, 1, { display: "block", opacity: 1 });
+    
+    TweenMax.to(item_diseno, 1, { opacity: 1, x: -170 });
+    TweenMax.to(item_arte, 1, { opacity: 1, x: -165 });
+    TweenMax.to(item_papeleria, 1, { opacity: 1, x: -160 });
+    TweenMax.to(item_escritura, 1, { opacity: 1, x: -155 });
+    TweenMax.to(item_arquitectura, 1, { opacity: 1, x: -150 });
+    
+  } else {
+    TweenMax.to(menuNav, 1, { width: "0", left: "0" });
     aparece = false;
-
-    TweenMax.to(item_todo, 0.2, {display: "none", opacity: 0});
-
-    TweenMax.to(item_diseno, 0.5, {opacity: 0, x: 400});
-    TweenMax.to(item_arte, 0.5, {opacity: 0, x: 350});
-    TweenMax.to(item_papeleria, 0.5, {opacity: 0, x: 300});
-    TweenMax.to(item_escritura, 0.5, {opacity: 0, x: 250});
-    TweenMax.to(item_arquitectura, 0.5, {opacity: 0, x: 200});
+    
+    TweenMax.to(item_todo, 0.2, { display: "none", opacity: 0 });
+    
+    TweenMax.to(item_diseno, 0.5, { opacity: 0, x: 400 });
+    TweenMax.to(item_arte, 0.5, { opacity: 0, x: 350 });
+    TweenMax.to(item_papeleria, 0.5, { opacity: 0, x: 300 });
+    TweenMax.to(item_escritura, 0.5, { opacity: 0, x: 250 });
+    TweenMax.to(item_arquitectura, 0.5, { opacity: 0, x: 200 });
   }
   
   console.log("funcionaaaa");
-
+  
 }
 btnCategoria.addEventListener("click", eventoBarra);
 
 
 var items = document.querySelector(".menu__categoria");
 
-function desapareceMenu(){
-  TweenMax.to(menuNav, 1, {width: "0", left: "0"});
+function desapareceMenu() {
+  TweenMax.to(menuNav, 1, { width: "0", left: "0" });
   aparece = false;
-
-  TweenMax.to(item_diseno, 0.5, {opacity: 0, x: 400});
-  TweenMax.to(item_arte, 0.5, {opacity: 0, x: 350});
-  TweenMax.to(item_papeleria, 0.5, {opacity: 0, x: 300});
-  TweenMax.to(item_escritura, 0.5, {opacity: 0, x: 250});
-  TweenMax.to(item_arquitectura, 0.5, {opacity: 0, x: 200});
-console.log("FUNFUCKCIONA");
+  
+  TweenMax.to(item_diseno, 0.5, { opacity: 0, x: 400 });
+  TweenMax.to(item_arte, 0.5, { opacity: 0, x: 350 });
+  TweenMax.to(item_papeleria, 0.5, { opacity: 0, x: 300 });
+  TweenMax.to(item_escritura, 0.5, { opacity: 0, x: 250 });
+  TweenMax.to(item_arquitectura, 0.5, { opacity: 0, x: 200 });
+  console.log("FUNFUCKCIONA");
 }
 items.addEventListener("click", desapareceMenu);

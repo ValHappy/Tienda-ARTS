@@ -155,21 +155,18 @@ function eventoBarra() {
     TweenMax.to(item_escritura, 0.5, { opacity: 0, x: 250 });
     TweenMax.to(item_arquitectura, 0.5, { opacity: 0, x: 200 });
   }
-  
   console.log("funcionaaaa");
-  
 }
 btnCategoria.addEventListener("click", eventoBarra);
 
 
 var items = document.querySelector(".menu__categoria");
-
 function desapareceMenu() {
   TweenMax.to(menuNav, 1, { width: "0", left: "0" });
   aparece = false;
   
   TweenMax.to(item_todo, 0.2, { display: "none", opacity: 0 });
-
+  
   TweenMax.to(item_diseno, 0.5, { opacity: 0, x: 400 });
   TweenMax.to(item_arte, 0.5, { opacity: 0, x: 350 });
   TweenMax.to(item_papeleria, 0.5, { opacity: 0, x: 300 });

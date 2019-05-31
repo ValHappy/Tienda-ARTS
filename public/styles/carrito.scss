@@ -258,6 +258,22 @@ body{
     }
 }
 
+.btn__jugar{
+    background-color: white;
+    color: $color-rose;
+    border: 0.1em solid  $color-rose;
+    
+    &:hover {
+        background-color: $color-rose;
+        color: white;
+    }
+    
+    & a{
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
 
 .pago-sin__info-medio {
     border-radius: 4px;

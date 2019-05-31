@@ -3,7 +3,7 @@ new p5(function (app) {
     log = new Logica(app);
     
     app.setup = function() {
-        const canva = app.createCanvas(1510, 264*3);
+        const canva = app.createCanvas(1900, 264*3);
         canva.parent("juego");
         app.frameRate(60);
         app.smooth();

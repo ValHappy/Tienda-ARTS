@@ -28,6 +28,7 @@ class Logica {
         this.contador = 0;
         this.s = null;
         
+        this.timeModal = 8;
         
         this.salto = true;
         this.mover = false;
@@ -57,29 +58,28 @@ class Logica {
             var cerrarModal = document.querySelector(".cerrar2");
             
             
-            modalWin.style.display = "block";
-            
-            
-            cerrarModal.onclick = function () {
-                modalWin.style.display = "none";
+
+            if (this.vivo == false) {
+                // this.timeModal --;
+                // console.log(timeModal);
+                modalWin.style.display = "block";
             }
             
-            window.onclick = function (event) {
-                if (event.target == modalWin) {
-                    modalWin.style.display = "none";
-                }
-            }
+            // window.onclick = function (event) {
+            //     if (event.target == modalWin) {
+            //         modalWin.style.display = "none";
+            //     }
+            // }
             
             // inicia esa cosa -------------------------------
             TweenMax.set("img",{xPercent:"-50%",yPercent:"-50%"})
-            
             var total = 100;
             var wdt = $(window).width();
             var hgt = $(window).height();
             var w = wdt*0.45;
             var h = hgt*0.5;
             
-            for (i=0; i<total; i++){ 
+            for (var i=0; i<total; i++){ 
                 $(".modal-contenido__info2").append('<div class="dot"></div>')
                 TweenMax.set($(".dot")[i],{x:Random(w),y:random(-100,100) ,opacity:1,scale:Random(0.5)+0.5,backgroundColor:"hsl(" + random(170,360) + ",60%,60%)"});
                 animm($(".dot")[i]);

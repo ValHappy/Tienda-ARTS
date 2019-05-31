@@ -434,6 +434,21 @@ label{
     }
 }
 
+.dot{
+    width:12px;
+    height:24px;
+    position: absolute;
+    background-color:#00FF00;
+    z-index:2;
+    top: 15%;
+    left: -10%;
+}
+
+img{
+    left:50%;
+    top:50%;
+    position:absolute;
+}
 
 @media (max-width: 360px){
     

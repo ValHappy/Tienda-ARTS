@@ -216,3 +216,34 @@ window.onclick = function (event) {
     }
 }
 
+// inicia esa cosa -------------------------------
+
+TweenMax.set("img",{xPercent:"-50%",yPercent:"-50%"})
+
+var total = 100;
+var wdt = $(window).width();
+var hgt = $(window).height();
+var w = wdt*0.45;
+var h = hgt*0.5;
+
+
+for (i=0; i<total; i++){ 
+    $(".modal-contenido__info2").append('<div class="dot"></div>')
+    TweenMax.set($(".dot")[i],{x:Random(w),y:random(-100,100) ,opacity:1,scale:Random(0.5)+0.5,backgroundColor:"hsl(" + random(170,360) + ",60%,60%)"});
+    animm($(".dot")[i]);
+}
+
+function animm(elm){   
+    TweenMax.to(elm,Random(5)+4,{y:h,ease:Linear.easeNone,repeat:-1, delay:-5});
+    TweenMax.to(elm,Random(5)+1,{x:'+=70', repeat:-1,yoyo:true,ease:Sine.easeInOut})
+    TweenMax.to(elm,Random(5)+1,{scaleX:0.2,rotation:Random(360), repeat:-1,yoyo:true,ease:Sine.easeInOut})
+    TweenMax.to(elm,Random(1)+0.5,{opacity:0, repeat:-1,yoyo:true,ease:Sine.easeInOut})
+};
+
+function Random (max) {
+    return Math.random()*max;
+}
+
+function random(min, max) {
+    return min + Math.floor( Math.random() * (max - min));
+}

@@ -247,3 +247,6 @@ function Random (max) {
 function random(min, max) {
     return min + Math.floor( Math.random() * (max - min));
 }
+
+
+var btnjugar = document.querySelector(".btn__jugar");

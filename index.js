@@ -81,8 +81,11 @@ app.get('/mostrar', function (request, response) {
 });
 
 app.get('/carrito', function (request, response) {
-    console.log("se ejecuta en NODE");
     response.render('carrito');
+});
+
+app.get('/juego', function (request, response) {
+    response.render('juego');
 });
 
 app.post('/carrito/comprar', function (request, response) {

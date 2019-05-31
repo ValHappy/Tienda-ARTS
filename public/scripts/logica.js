@@ -55,23 +55,15 @@ class Logica {
             
             //intento
             var modalWin = document.querySelector(".modal2");
+            var contenidoModal = document.querySelector(".modal-contenido2");
             var cerrarModal = document.querySelector(".cerrar2");
-            
-            
 
             if (this.vivo == false) {
-                // this.timeModal --;
-                // console.log(timeModal);
-                modalWin.style.display = "block";
+                //TweenMax.to(contenidoModal, 2, {opacity: 1});
+                TweenMax.to(modalWin, 2, {display: "block", opacity: 1});
             }
             
-            // window.onclick = function (event) {
-            //     if (event.target == modalWin) {
-            //         modalWin.style.display = "none";
-            //     }
-            // }
-            
-            // inicia esa cosa -------------------------------
+            // inicia confeti -------------------------------
             TweenMax.set("img",{xPercent:"-50%",yPercent:"-50%"})
             var total = 100;
             var wdt = $(window).width();

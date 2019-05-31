@@ -20,7 +20,6 @@ class Splash{
     }
   }
   
-  
   display() {
     this.app.fill(this.col);
     this.app.noStroke();

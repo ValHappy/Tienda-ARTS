@@ -2,161 +2,161 @@
     {
         "nombre": "Regla Paralela Thales",
         "precio": 27800,
-        "categoria": "Arquitectura",
-        "imagen": "https://tecnos.com.co/images/virtuemart/product/993.jpg",
+        "categoria": "arquitectura",
+        "imagen": "/img/productos/1.png",
         "tipo": "promo",
         "descripcion": "Regla de 60 cm"
     },
     {
         "nombre": "Afilaminas Staedtler",
         "precio": 46300,
-        "categoria": "Arquitectura",
-        "imagen": "https://tecnos.com.co/images/virtuemart/product/afilaminas%20sta.jpg",
-        "tipo": "promo",
+        "categoria": "arquitectura",
+        "imagen": "/img/productos/2.png",
+        "tipo": "nuevo",
         "descripcion": "La acción de rotación para el afilado de las minas de grafito y de color de 2mm. Incluye una serie de consejos de limpieza y parada automática. Adaptable a otras minas de puerto marcas."
     },
     {
         "nombre": "Curvigrafo Modificable Numerado",
         "precio": 14500,
-        "categoria": "Arquitectura",
-        "imagen": "https://tecnos.com.co/images/virtuemart/product/CUR08158.jpg",
-        "tipo": "promo",
+        "categoria": "arquitectura",
+        "imagen": "/img/productos/3.png",
+        "tipo": "destacado",
         "descripcion": "Regla flexible de 50 cm para hacer curvas"
     },
     {
         "nombre": "Plantilla Circulos Standagraph",
         "precio": 23000,
-        "categoria": "Arquitectura",
-        "imagen": "https://tecnos.com.co/images/virtuemart/product/IMG_0006-4.jpg",
+        "categoria": "arquitectura",
+        "imagen": "/img/productos/4.png",
         "tipo": "promo",
         "descripcion": "Plantilla para dibujar círculos en pasta que incluye líneas auxiliares."
     },
     {
         "nombre": "Blender Pro Aqua Medium Molotow",
         "precio": 22500,
-        "categoria": "Diseño",
-        "imagen": "https://tecnos.com.co/images/virtuemart/product/729099.jpg",
-        "tipo": "promo",
+        "categoria": "diseño",
+        "imagen": "/img/productos/5.png",
+        "tipo": "nuevo",
         "descripcion": "Marcador recargable y su tinta es una muestra de la innovación hecha a base de colorantes alimentarios"
     },
     {
         "nombre": "Rapidografo Desechable Staedtler Individual",
         "precio": 11000,
-        "categoria": "Diseño",
-        "imagen": "https://tecnos.com.co/images/virtuemart/product/STAEDTLER%20VARIOS4.jpg",
-        "tipo": "promo",
+        "categoria": "diseño",
+        "imagen": "/img/productos/6.png",
+        "tipo": "destacado",
         "descripcion": "Rapidografo desechable, puntas 00.5, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8,1.2 y biselado"
     },
     {
         "nombre": "Touch Brush Marker Unidad",
         "precio": 14000,
-        "categoria": "Diseño",
-        "imagen": "https://tecnos.com.co/images/virtuemart/product/MAR2832.jpg",
+        "categoria": "diseño",
+        "imagen": "/img/productos/7.png",
         "tipo": "promo",
         "descripcion": "Marcador touch twin brush cuenta con punta de pincel y punta biselada, permitiendo a los usuarios expresar una gama más amplia de técnicas, cuerpo ergonómico para un agarre perfecto."
     },
     {
         "nombre": "Empty Pump Softliner 1mm Brush Tip",
         "precio": 28000,
-        "categoria": "Diseño",
-        "imagen": "https://tecnos.com.co/images/virtuemart/product/211011.jpg ",
-        "tipo": "promo",
+        "categoria": "diseño",
+        "imagen": "/img/productos/8.png",
+        "tipo": "nuevo",
         "descripcion": "Este marcador vacío permite la libertad artística en todos los niveles. Además del cuerpo rellenable, existen diversos consejos de intercambio en diferentes estilos disponibles. El marcador es compatible con casi todas las pinturas y tintas. De esta forma, los tonos de color individuales pueden mezclarse y almacenarse fácilmente. La flexibilidad de este marcador vacío difícilmente puede ser superada."
     },
     {
         "nombre": "Acuarela Studio Pebeo X 12",
         "precio": 35500,
-        "categoria": "Arte",
-        "imagen": "https://tecnos.com.co/images/virtuemart/product/ACU0054 .jpg",
-        "tipo": "promo",
+        "categoria": "arte",
+        "imagen": "/img/productos/9.png",
+        "tipo": "destacado",
         "descripcion": "Set ACUARELA Studio 12 unidades X 12 ml, Pebeo. Las Pinturas de acuarela les permiten una gran resistencia al paso del tiempo."
     },
     {
         "nombre": "Oleopastel Faber X 36",
         "precio": 68000,
-        "categoria": "Arte",
-        "imagen": "https://tecnos.com.co/images/virtuemart/product/OLE1577.jpg",
+        "categoria": "arte",
+        "imagen": "/img/productos/10.png",
         "tipo": "promo",
         "descripcion": "Las tizas pastel grasas ofrecen sorprendentes posibilidades de aplicación tanto para colores fuertes e intensos como para delicados tonos pastel. Dada su alta luminosidad, las tizas son ideales para técnicas de encáustica así como para técnicas de raspado y pastel. En función del efecto artístico deseado, se puede difuminar con el dedo o aceite de trementina y pincel. Fáciles de aplicar. Ideales para trabajar sobre microporoso. Resistente al agua. No tóxicos"
     },
     {
         "nombre": "Acrilicos Studio Pebeo X 12",
         "precio": 35500,
-        "categoria": "Arte",
-        "imagen": "https://tecnos.com.co/images/virtuemart/product/ACR0041 .jpg",
-        "tipo": "promo",
+        "categoria": "arte",
+        "imagen": "/img/productos/11.png",
+        "tipo": "nuevo",
         "descripcion": "Set ACRILICO Studio 12 unidades X 12 ml, Pebeo. Las Pinturas de acrilico de Pebeo tienen colores brillantes y profundos, lisos y finos. Les permiten una gran resistencia al paso del tiempo."
     },
     {
         "nombre": "Techniques Brushes X 6",
         "precio": 60000,
-        "categoria": "Arte",
-        "imagen": "https://tecnos.com.co/images/virtuemart/product/22.jpg",
-        "tipo": "promo",
+        "categoria": "arte",
+        "imagen": "/img/productos/12.png",
+        "tipo": "destacado",
         "descripcion": "Un surtido especialmente seleccionado de pinceles para diferentes técnicas de pintura, desarrollado para producir diferentes marcas, lo que permite al artista mayores posibilidades creativas, cepillo de espuma, de ventilador, plano, de peine, rigger Brush y swordliner."
     },
     {
         "nombre": "Block Mantequilla 1/4 x 25",
         "precio": 5700,
-        "categoria": "Papeleria",
-        "imagen": "https://tecnos.com.co/images/virtuemart/product/MANTEQUILLA.jpg",
+        "categoria": "papeleria",
+        "imagen": "/img/productos/13.png",
         "tipo": "promo",
         "descripcion": "Papel de dibujo transparente blanco , ligeramente alisado y con superficie uniforme y sin grano. Ideal para calcado de trabajos escolares y aprendices, decoración, impresión, imágenes, etc"
     },
     {
         "nombre": "Cartulina Murillo",
         "precio": 13200,
-        "categoria": "Papeleria",
-        "imagen": "https://tecnos.com.co/images/virtuemart/product/CAR4006.jpg",
-        "tipo": "promo",
+        "categoria": "papeleria",
+        "imagen": "/img/productos/14.png",
+        "tipo": "nuevo",
         "descripcion": "Papel LONG LIFE y ACID FREE como garantía de larga conservación. El grano que caracteriza la superficie y la resistencia de las tintas a la luz, lo convierten en el papel ideal para: ediciones prestigiosas, impresiones de calidad, trabajos cartotécnicos y de encuadernación, dibujo, collages, passe par-tout. "
     },
     {
         "nombre": "Bitácora Diaryflex 100 GMS",
         "precio": 45000,
-        "categoria": "Papeleria",
-        "imagen": "https://tecnos.com.co/images/virtuemart/product/Diapositiva277.jpg",
-        "tipo": "promo",
+        "categoria": "papeleria",
+        "imagen": "/img/productos/15.png",
+        "tipo": "destacado",
         "descripcion": "Hoja con puntos recargable, papel blanco natural, 80 Hojas / 160 Páginas, interior rojo, correa elástica y marcador incorporado, titular de la tarjeta en el interior de la cubierta, orientación vertical."
     },
     {
         "nombre": "Bitácora Cappuccino 120 GMS A4",
         "precio": 62000,
-        "categoria": "Papeleria",
-        "imagen": "https://tecnos.com.co/images/virtuemart/product/Diapositiva273.jpg",
+        "categoria": "papeleria",
+        "imagen": "/img/productos/16.png",
         "tipo": "promo",
         "descripcion": "Cuaderno de bocetos con papel marrón claro de dibujo liso, con su superficie cerrada, es perfectamente adecuado para trabajar con bolígrafos de tinta china, plumas estilográficas y marcadores acrílicos, así como con otros bolígrafos a base de agua con una abrasión mínima, 40 hojas / 80 páginas con 120 gsm de tamaño A4."
     },
     {
         "nombre": "Minas 5.6 Caja por 6 Cretacolor",
         "precio": 30000,
-        "categoria": "Escritura",
-        "imagen": "https://tecnos.com.co/images/virtuemart/product/MIN14988.jpg",
-        "tipo": "promo",
+        "categoria": "escritura",
+        "imagen": "/img/productos/17.png",
+        "tipo": "nuevo",
         "descripcion": "Repuestos para portaminas 5,6 ML"
     },
     {
         "nombre": "Compas Staedtler adaptador y portaminas",
         "precio": 82500,
-        "categoria": "Escritura",
-        "imagen": "https://tecnos.com.co/images/virtuemart/product/COM37626.jpg",
-        "tipo": "promo",
+        "categoria": "escritura",
+        "imagen": "/img/productos/18.png",
+        "tipo": "destacado",
         "descripcion": "Compas de precisión staedtler profesional de ajuste inmediato, adaptador, portaminas y minas 0.5mm"
     },
     {
         "nombre": "ReBolígrafo Ageless Pilot Platagla Paralela Thales",
         "precio": 110000,
-        "categoria": "Escritura",
-        "imagen": "https://tecnos.com.co/images/virtuemart/product/AGELESS PLATA.jpg",
+        "categoria": "escritura",
+        "imagen": "/img/productos/19.png",
         "tipo": "promo",
         "descripcion": "Bolígrafo con acabado especialmente delicado. Tinta fusión gel-aceite con la fluidez del gel y a la vez tiene la consistencia de los base aceite. Mecanismo exclusivo de doble giro, mediante el que se extrae su punta en dos pasos."
     },
     {
         "nombre": "Estilografo Al Star Lamy",
         "precio": 153000,
-        "categoria": "Escritura",
-        "imagen": "https://tecnos.com.co/images/virtuemart/product/EST0889VINO.jpg",
-        "tipo": "promo",
+        "categoria": "escritura",
+        "imagen": "/img/productos/20.png",
+        "tipo": "nuevo",
         "descripcion": "Lamy AL-Star facilita la escritura más que nunca, permitiendo expresiones de personalidad e individualidad. Este instrumento juvenil y elegante, fue diseñado para aquellos que prefieren comodidad, ergonomía y romper esquemas."
     }
 ]

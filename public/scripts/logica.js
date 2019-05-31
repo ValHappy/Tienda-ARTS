@@ -59,8 +59,8 @@ class Logica {
             var cerrarModal = document.querySelector(".cerrar2");
 
             if (this.vivo == false) {
-                //TweenMax.to(contenidoModal, 2, {opacity: 1});
-                TweenMax.to(modalWin, 2, {display: "block", opacity: 1});
+                TweenMax.to(contenidoModal, 1.5, {opacity: 1});
+                TweenMax.to(modalWin, 1, {display: "block", opacity: 1});
             }
             
             // inicia confeti -------------------------------

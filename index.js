@@ -13,7 +13,7 @@ app.use(express.urlencoded());
 app.use(express.json());
 
 // Inicialización de mongo
-const url = 'mongodb://localhost:27017';
+const url = 'mongodb+srv://Amayha:nosoyunatortuga-12@clusterarts-qpozt.mongodb.net/test?retryWrites=true&w=majority';
 const dbName = 'tienda';
 const client = new MongoClient(url);
 
@@ -95,13 +95,6 @@ app.post('/carrito/comprar', function (request, response) {
         assert.equal(null, err);
         const db = client.db(dbName);
 
-        //Llamar la db
-        // const fs = require('fs');
-        // var collection = db.collection('productos');
-        // collection.find({}).toArray(function (err, docs) {
-        //     fs.writeFileSync('db.json', JSON.stringify(docs));
-        // });
-
 
         const collection = db.collection('pedidos');
         collection.insertOne(pedido, function (err) {
@@ -116,6 +109,8 @@ function cargarProducto(idProducto, res) {
     client.connect(function (err) {
         assert.equal(null, err);
         const db = client.db(dbName);
+
+
         const productos = db.collection('productos');
         var o_id = new mongo.ObjectID(idProducto);
         productos.find({ _id: o_id }).toArray(function (err, docs) {
@@ -139,6 +134,8 @@ function mostrarTodos(tipo) {
     client.connect(function (err) {
         assert.equal(null, err);
         const db = client.db(dbName);
+
+
         const productos = db.collection('productos');
         productos.find({}).toArray(function (err, docs) {
             assert.equal(err, null);
@@ -153,6 +150,8 @@ async function consultar(query) {
         client.connect(function (err) {
             assert.equal(null, err);
             const db = client.db(dbName);
+
+            
             const productos = db.collection('productos');
             productos.find(query).toArray(function (err, docs) {
                 assert.equal(err, null);
@@ -164,7 +163,5 @@ async function consultar(query) {
 }
 
 
-
-
 console.log("Servidor iniciado...");
-app.listen(3000);
+app.listen(process.env.PORT || 3000);

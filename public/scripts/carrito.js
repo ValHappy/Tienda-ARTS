@@ -249,4 +249,3 @@ function random(min, max) {
 }
 
 
-var btnjugar = document.querySelector(".btn__jugar");

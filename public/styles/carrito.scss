@@ -15,7 +15,6 @@ body{
     margin: 0;
     font-family: 'Comfortaa', cursive;
     font-size: $tam-font;
-    overflow-x: hidden;
 }
 
 .encabezado{
@@ -445,10 +444,6 @@ label{
     left: -8%;
 }
 
-#juego{
-    width: 200px;
-    overflow-x: hidden;
-}
 
 
 @media (max-width: 360px){

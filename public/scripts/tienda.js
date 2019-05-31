@@ -94,10 +94,6 @@ function paginaCargada() {
     boton.addEventListener('click', agregarAlCarrito);
   }
   botones.forEach(recorrerBotones);
-  
-  // var tamScreen = window.innerWidth;
-  // var item_diseno = document.querySelector(".item__diseno");
-  // TweenMax.to(item_diseno, 0, { x: tamScreen-500 });
 }
 window.addEventListener('load', paginaCargada);
 
@@ -172,6 +168,8 @@ function desapareceMenu() {
   TweenMax.to(menuNav, 1, { width: "0", left: "0" });
   aparece = false;
   
+  TweenMax.to(item_todo, 0.2, { display: "none", opacity: 0 });
+
   TweenMax.to(item_diseno, 0.5, { opacity: 0, x: 400 });
   TweenMax.to(item_arte, 0.5, { opacity: 0, x: 350 });
   TweenMax.to(item_papeleria, 0.5, { opacity: 0, x: 300 });
